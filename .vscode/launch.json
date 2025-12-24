@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter (dev)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "toolArgs": [
+        "--flavor", "dev",
+        "--dart-define", "FLAVOR=dev"
+      ]
+      // "deviceId": "emulator-5554"  // opsional: lock ke device tertentu
+    },
+    {
+      "name": "Flutter (prod)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "toolArgs": [
+        "--flavor", "prod",
+        "--dart-define", "FLAVOR=prod"
+      ]
+    },
+    {
+      "name": "Flutter (prod - release)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release",
+      "toolArgs": [
+        "--flavor", "prod",
+        "--dart-define", "FLAVOR=prod"
+      ]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run dev on multiple devices",
+      "configurations": ["Flutter (dev)"],
+      "stopAll": true
+    }
+  ]
+}

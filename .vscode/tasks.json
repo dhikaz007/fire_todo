@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build APK (dev)",
+      "type": "shell",
+      "command": "flutter build apk --flavor dev --dart-define FLAVOR=dev --no-tree-shake-icons --no-shrink"
+    },
+    {
+      "label": "Build APK (prod)",
+      "type": "shell",
+      "command": "flutter build apk --flavor prod --dart-define FLAVOR=prod --no-tree-shake-icons --no-shrink"
+    },
+    {
+      "label": "Build AAB (prod)",
+      "type": "shell",
+      "command": "flutter build appbundle --flavor prod --dart-define FLAVOR=prod --no-tree-shake-icons --no-shrink --obfuscate --split-debug-info=build/app/outputs/symbols"
+    },
+    {
+      "label": "Generate Logo App",
+      "type": "shell",
+      "command": "dart run flutter_launcher_icons"
+    },
+    {
+      "label": "Generate Splash Screen Dev",
+      "type": "shell",
+      "command": "dart run flutter_native_splash:create --flavor dev"
+    },
+    {
+      "label": "Generate Splash Screen Prod",
+      "type": "shell",
+      "command": "dart run flutter_native_splash:create --flavor prod"
+    },
+    {
+      "label": "Build Runner",
+      "type": "shell",
+      "command": "dart run build_runner build --delete-conflicting-outputs",
+      "problemMatcher": []
+    },
+    {
+      "label": "Flutter Clean",
+      "type": "shell",
+      "command": "flutter clean; flutter pub get",
+      "problemMatcher": []
+    }
+  ]
+}

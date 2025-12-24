@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "343168010082",
+    "project_id": "fire-todo-30c28",
+    "storage_bucket": "fire-todo-30c28.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343168010082:android:efe65cb23068fc6a6bce3b",
+        "android_client_info": {
+          "package_name": "id.dhikaz.fire_todo.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy2y_QkXJcd6X4etOBPSxqkFoQMB-S-C4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
