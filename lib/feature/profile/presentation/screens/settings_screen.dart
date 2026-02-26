@@ -83,7 +83,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         Modular.to.maybePop();
                       },
                     ),
-                    centerMiddle: true,
                     middle: const TextApp(
                       text: 'Settings',
                       size: FontAppSize.font_20,

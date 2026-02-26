@@ -12,7 +12,7 @@ class SnackbarApp {
     required String msg,
     required SnackbarType type,
     Duration? duration,
-  }) async {
+  }) {
     Color backgroundColor;
     Color textColor;
     IconData iconData;
@@ -52,7 +52,6 @@ class SnackbarApp {
       flushbarStyle: FlushbarStyle.GROUNDED,
       duration: duration ?? const Duration(milliseconds: 1800),
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      isDismissible: true,
       dismissDirection: FlushbarDismissDirection.HORIZONTAL,
     ).show(context);
   }

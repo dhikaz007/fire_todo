@@ -54,8 +54,7 @@ void main() {
       verify(() => mockRepository.getProfileValue()).called(1);
     });
 
-    test('should update profile and notify listeners when box changes',
-        () async {
+    test('should update profile and notify listeners when box changes', () {
       var notifyCallCount = 0;
       hiveController.addListener(() => notifyCallCount++);
 

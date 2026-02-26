@@ -274,7 +274,6 @@ class _ListTodoScreenState extends State<ListTodoScreen> {
                             Modular.to.maybePop();
                           },
                         ),
-                        centerMiddle: true,
                         middle: const TextApp(
                           text: 'My Todo',
                           size: FontAppSize.font_20,

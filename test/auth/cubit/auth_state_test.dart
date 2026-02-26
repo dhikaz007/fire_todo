@@ -1,5 +1,5 @@
-import 'package:fire_todo/feature/auth/presentation/cubit/auth_cubit.dart';
 import 'package:fire_todo/feature/auth/domain/models/models.dart';
+import 'package:fire_todo/feature/auth/presentation/cubit/auth_cubit.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -13,7 +13,7 @@ void main() {
     test('authenticated state should hold correct data', () {
       const response = LoginModel();
       const token = 'test-token';
-      const state = AuthState.authenticated(response: response, token: token);
+      const state = AuthState.authenticated(token: token);
 
       state.whenOrNull(
         authenticated: (resp, tok) {
@@ -35,7 +35,7 @@ void main() {
 
     test('verifyEmail state should hold RequestEmailModel', () {
       const response = RequestEmailModel();
-      const state = AuthState.verifyEmail(response: response);
+      const state = AuthState.verifyEmail();
 
       state.whenOrNull(
         verifyEmail: (resp) => expect(resp, equals(response)),

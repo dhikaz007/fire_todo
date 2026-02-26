@@ -1,5 +1,4 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:fire_todo/feature/auth/domain/models/models.dart';
 import 'package:fire_todo/feature/auth/presentation/cubit/auth_cubit.dart';
 import 'package:fire_todo/feature/auth/presentation/screens/screens.dart';
 import 'package:fire_todo/feature/profile/presentation/cubit/profile_cubit.dart';
@@ -100,13 +99,12 @@ void main() {
         Stream.fromIterable([
           const AuthState.initial(),
           const AuthState.loading(),
-          const AuthState.authenticated(response: LoginModel())
+          const AuthState.authenticated()
         ]),
         initialState: const AuthState.initial(),
       );
-      when(() => mockProfileCubit.getUser()).thenAnswer((_) async {});
-      when(() => mockModularNavigator.navigate('/main'))
-          .thenAnswer((_) async {});
+      when(() => mockProfileCubit.getUser()).thenAnswer((_) {});
+      when(() => mockModularNavigator.navigate('/main')).thenAnswer((_) {});
 
       await tester.pumpWidget(homeTestWidget(const LoginScreen()));
       await tester.pumpAndSettle();

@@ -1,6 +1,5 @@
 import 'package:fire_todo/shared/storage/domain/i_storage_token_repository.dart';
 import 'package:fire_todo/shared/storage/presentation/storage_token_controller.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -19,10 +18,9 @@ void main() {
 
     mockRepository = MockStorageTokenRepository();
 
-    when(() => mockRepository.getIdToken())
-        .thenAnswer((_) => Future.value(null));
+    when(() => mockRepository.getIdToken()).thenAnswer((_) => Future.value());
     when(() => mockRepository.getRefreshToken())
-        .thenAnswer((_) => Future.value(null));
+        .thenAnswer((_) => Future.value());
 
     controller = StorageTokenController(mockRepository);
   });
@@ -52,7 +50,7 @@ void main() {
       when(() => mockRepository.getIdToken())
           .thenAnswer((_) async => newIdToken);
       when(() => mockRepository.getRefreshToken())
-          .thenAnswer((_) => Future.value(null));
+          .thenAnswer((_) => Future.value());
 
       await controller.saveIdToken(newIdToken);
 

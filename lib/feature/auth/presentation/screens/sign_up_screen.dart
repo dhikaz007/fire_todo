@@ -50,7 +50,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         signUp: (response) => true,
         orElse: () => false,
       ),
-      listener: (context, state) async {
+      listener: (context, state) {
         // debugPrint('STATE SIGN UP $state');
         state.maybeWhen(
           loading: () => LoadingHelper.showLoad(context),
@@ -144,12 +144,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     controller: _passwordController,
                     filled: true,
                     filledColor: ColorApp.white,
-                    keyboardType: TextInputType.text,
                     prefixIcon: Icon(
                       Icons.lock_person,
                       color: ColorApp.primary(50),
                     ),
-                    textInputAction: TextInputAction.done,
                     borderRadius: 12,
                     obscure: true,
                     validator: (value) {
@@ -167,7 +165,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ButtonPrimary(
                     radius: 24,
                     size: FontAppSize.font_16,
-                    onPressed: () async {
+                    onPressed: ()  {
                       if (_formKey.currentState!.validate()) {
                         context.read<AuthCubit>().signUp(
                               email: _emailController.text.trim(),

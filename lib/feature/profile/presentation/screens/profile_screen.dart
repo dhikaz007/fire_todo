@@ -30,7 +30,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return ModularListener<AuthCubit, AuthState>(
-      listener: (context, state) async {
+      listener: (context, state) {
         state.when(
           initial: () {},
           loading: () async {
@@ -101,7 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Container(
                   decoration: BoxDecoration(
                     color: ColorApp.white,
-                    border: Border.all(color: ColorApp.black),
+                    border: Border.all(),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: ClipRRect(

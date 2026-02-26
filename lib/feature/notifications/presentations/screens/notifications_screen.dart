@@ -12,7 +12,6 @@ class NotificationsScreen extends StatelessWidget {
       backgroundColor: ColorApp.backgroundLight,
       appBar: AppbarApp(
         title: 'Notifications',
-        canPop: true,
       ),
     );
   }

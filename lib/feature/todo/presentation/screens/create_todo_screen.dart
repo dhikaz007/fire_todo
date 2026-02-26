@@ -81,7 +81,6 @@ class _CreateTodoScreenState extends State<CreateTodoScreen> {
                       ),
                       child: SfDateRangePicker(
                         backgroundColor: ColorApp.white,
-                        selectionMode: DateRangePickerSelectionMode.single,
                         initialSelectedDate: initialDate,
                         minDate: minDate,
                         maxDate: maxDate,
@@ -89,7 +88,6 @@ class _CreateTodoScreenState extends State<CreateTodoScreen> {
                             (DateRangePickerSelectionChangedArgs args) {
                           setState(() => temp = args.value as DateTime?);
                         },
-                        showActionButtons: false,
                       ),
                     ),
                   ],
@@ -99,7 +97,7 @@ class _CreateTodoScreenState extends State<CreateTodoScreen> {
           ),
           actions: [
             TextButton(
-              onPressed: () => Navigator.pop(context, null),
+              onPressed: () => Navigator.pop(context),
               child:
                   const TextApp(text: 'Cancel', weight: FontAppWeight.medium),
             ),
@@ -173,7 +171,6 @@ class _CreateTodoScreenState extends State<CreateTodoScreen> {
                       Modular.to.maybePop();
                     },
                   ),
-                  centerMiddle: true,
                   middle: const TextApp(
                     text: 'Create New Todo',
                     size: FontAppSize.font_20,
@@ -216,7 +213,6 @@ class _CreateTodoScreenState extends State<CreateTodoScreen> {
                           borderRadius: 8,
                           enabledBorderColor: ColorApp.grey,
                           lines: 5,
-                          maxLength: null,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return 'Field is required';
@@ -279,7 +275,7 @@ class _CreateTodoScreenState extends State<CreateTodoScreen> {
                 child: ButtonPrimary(
                   radius: 24,
                   size: FontAppSize.font_16,
-                  onPressed: () async {
+                  onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       // print(_initialDate);
                       context.read<TodoCubit>().createTodo(

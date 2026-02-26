@@ -134,7 +134,7 @@ void main() {
         act: (cubit) => cubit.verifyEmail(),
         expect: () => [
           const AuthState.loading(),
-          const AuthState.verifyEmail(response: RequestEmailModel()),
+          const AuthState.verifyEmail(),
         ],
         verify: (_) {
           verify(() => mockStorageRepo.removeAllToken()).called(1);

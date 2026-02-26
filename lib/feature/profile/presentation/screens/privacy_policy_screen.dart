@@ -130,7 +130,6 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                       Modular.to.maybePop();
                     },
                   ),
-                  centerMiddle: true,
                   middle: const TextApp(
                     text: 'Privacy Policy',
                     size: FontAppSize.font_20,

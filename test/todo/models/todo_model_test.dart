@@ -1,7 +1,6 @@
+import 'package:fire_todo/feature/todo/domain/models/models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:fire_todo/feature/todo/domain/models/models.dart';
 
 void main() {
   const passTest = 'Test Complete JSON ✅';
@@ -26,7 +25,7 @@ void main() {
       expect(model2.booleanValue, isNull);
       debugPrint(passMissingTest);
     });
-    test('should create a DescriptionValueModel object', () async {
+    test('should create a DescriptionValueModel object', () {
       const mock = 'mock_description';
       final Map<String, dynamic> json = {'stringValue': mock};
 
@@ -40,7 +39,7 @@ void main() {
       expect(model2.stringValue, isNull);
       debugPrint(passMissingTest);
     });
-    test('should create a DueDateValueModel object', () async {
+    test('should create a DueDateValueModel object', () {
       final mock = DateTime.now().toString();
       final Map<String, dynamic> json = {'timestampValue': mock};
 
@@ -53,7 +52,7 @@ void main() {
       expect(model2.timestampValue, isNull);
       debugPrint(passMissingTest);
     });
-    test('should create a FieldsModel object', () async {
+    test('should create a FieldsModel object', () {
       final mockTime = DateTime.parse('2024-05-21T10:00:00.000Z');
       final Map<String, dynamic> json = {
         'title': {'stringValue': 'mock_title'},
@@ -86,7 +85,7 @@ void main() {
       expect(model2.dueDate?.timestampValue, isNull);
       debugPrint(passMissingTest);
     });
-    test('should create a DocumentModel object', () async {
+    test('should create a DocumentModel object', () {
       final mockTime = DateTime.parse('2024-05-21T10:00:00.000Z');
 
       final Map<String, dynamic> json = {

@@ -97,8 +97,7 @@ void main() {
     Modular.init(AppModule());
     Modular.navigatorDelegate = navigator;
     when(() => navigator.canPop()).thenReturn(true);
-    when(() => navigator.pushNamed(any()))
-        .thenAnswer((_) => Future.value(null));
+    when(() => navigator.pushNamed(any())).thenAnswer((_) => Future.value());
 
     //* Hive
     await setUpTestHive();
@@ -236,7 +235,7 @@ void main() {
 
   tearDown(() => mockAuthCubit.close());
 
-  tearDownAll(() async {
+  tearDownAll(() {
     tearDownTestHive();
     mockHiveBox.close();
   });

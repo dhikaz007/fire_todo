@@ -167,12 +167,10 @@ class _LoginScreenState extends State<LoginScreen> {
                               controller: _passwordController,
                               filled: true,
                               filledColor: ColorApp.white,
-                              keyboardType: TextInputType.text,
                               prefixIcon: Icon(
                                 Icons.lock_person,
                                 color: ColorApp.primary2(50),
                               ),
-                              textInputAction: TextInputAction.done,
                               borderRadius: 12,
                               obscure: true,
                               validator: (value) {
@@ -190,7 +188,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ButtonPrimary(
                               radius: 20,
                               key: const Key('buttonLogin'),
-                              onPressed: () async {
+                              onPressed: ()  {
                                 if (_formKey.currentState!.validate()) {
                                   context.read<AuthCubit>().loginEmailPassword(
                                         email: _emailController.text.trim(),
@@ -213,7 +211,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 const Gap(8),
                                 InkWell(
                                   key: const Key('buttonSignUp'),
-                                  onTap: () async {
+                                  onTap: ()  {
                                     Modular.to.pushNamed('/auth/sign-up');
                                   },
                                   child: const TextApp(

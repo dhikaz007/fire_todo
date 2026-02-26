@@ -73,7 +73,7 @@ void main() {
       act: (bloc) => bloc.loadTodo(),
       expect: () => [
         const TodoState.loading(),
-        const TodoState.loaded(response: ListTodoModel()),
+        const TodoState.loaded(),
       ],
     );
   });
