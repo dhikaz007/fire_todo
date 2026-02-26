@@ -1,5 +1,3 @@
-part of 'constant.dart';
-
 class ImagesApp {
   static const _baseUrl = 'assets/images';
 

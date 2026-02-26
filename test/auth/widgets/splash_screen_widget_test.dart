@@ -1,14 +1,14 @@
 import 'package:bloc_test/bloc_test.dart';
+import 'package:fire_todo/feature/auth/presentation/screens/screens.dart';
+import 'package:fire_todo/shared/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:mocktail/mocktail.dart';
 
-import 'package:fire_todo/feature/auth/screens/screens.dart';
-import 'package:fire_todo/feature/home/screens/screens.dart';
-import 'package:fire_todo/feature/profile/cubit/profile_cubit.dart';
-import 'package:fire_todo/shared/shared.dart';
+import 'package:fire_todo/feature/home/presentation/screens/screens.dart';
+import 'package:fire_todo/feature/profile/presentation/cubit/profile_cubit.dart';
 
 class MockProfileCubit extends MockCubit<ProfileState>
     implements ProfileCubit {}

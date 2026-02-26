@@ -1,4 +1,6 @@
-part of 'routes.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
+import '../feature/todo/presentation/screens/screens.dart';
 
 class TodoModule extends Module {
   @override

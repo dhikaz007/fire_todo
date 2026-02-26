@@ -1,11 +1,16 @@
-part of 'routes.dart';
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
+import '../shared/storage/domain/i_storage_token_repository.dart';
 
 class AuthGuard extends RouteGuard {
   AuthGuard() : super(redirectTo: "/auth/");
 
   @override
   FutureOr<bool> canActivate(String path, ParallelRoute route) async {
-    final storage = Modular.get<StorageTokenRepository>();
+    final storage = Modular.get<IStorageTokenRepository>();
     final token = await storage.getIdToken();
     debugPrint(
         'AuthGuard: Mengecek token. Hasil: ${token != null && token.isNotEmpty}');

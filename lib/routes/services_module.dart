@@ -1,10 +1,18 @@
-part of 'routes.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-abstract class AppNavigationService {
+import '../shared/local_db/data/hive_repository_impl.dart';
+import '../shared/local_db/domain/i_hive_repository.dart';
+import '../shared/local_db/presentation/hive_controller.dart';
+import '../shared/network/dio_client.dart';
+import '../shared/storage/data/storage_token_repository_impl.dart';
+import '../shared/storage/domain/i_storage_token_repository.dart';
+import '../shared/storage/presentation/storage_token_controller.dart';
+
+abstract class IAppNavigationRepository {
   void navigateToLoginAndClearStack();
 }
 
-class ModularNavigationService implements AppNavigationService {
+class AppNavigationRepositoryImpl implements IAppNavigationRepository {
   @override
   void navigateToLoginAndClearStack() {
     Modular.to.pushNamedAndRemoveUntil('/login', (route) => false);
@@ -14,19 +22,15 @@ class ModularNavigationService implements AppNavigationService {
 class ServicesModule extends Module {
   @override
   void exportedBinds(i) {
-    i.add<AppNavigationService>(() => ModularNavigationService());
+    i.addLazySingleton(DioClient.new);
+    i.addLazySingleton<IAppNavigationRepository>(
+        AppNavigationRepositoryImpl.new);
 
-    i.add<StorageTokenRepository>(() => StorageTokenService());
-    i.add<StorageTokenController>(
-      () => StorageTokenController(i.get<StorageTokenRepository>()),
-      config: BindConfig(onDispose: (value) => value.dispose),
-    );
+    i.addLazySingleton<IStorageTokenRepository>(StorageTokenRepositoryImpl.new);
+    i.addSingleton<StorageTokenController>(StorageTokenController.new);
 
-    i.add<HiveRepository>(() => HiveService());
-    i.add<HiveController>(
-      () => HiveController(i.get<HiveRepository>()),
-      config: BindConfig(onDispose: (value) => value.dispose),
-    );
+    i.addLazySingleton<IHiveRepository>(HiveRepositoryImpl.new);
+    i.addSingleton<HiveController>(HiveController.new);
     super.exportedBinds(i);
   }
 }

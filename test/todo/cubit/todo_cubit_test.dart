@@ -1,9 +1,9 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:fire_todo/feature/todo/cubit/todo_cubit.dart';
 import 'package:fire_todo/feature/todo/domain/models/models.dart';
-import 'package:fire_todo/feature/todo/domain/services/services.dart';
-import 'package:fire_todo/hive/boxes.dart';
-import 'package:fire_todo/services/services.dart';
+import 'package:fire_todo/feature/todo/domain/repositories/i_todo_repository.dart';
+import 'package:fire_todo/feature/todo/presentation/cubit/todo_cubit.dart';
+import 'package:fire_todo/shared/local_db/domain/i_hive_repository.dart';
+import 'package:fire_todo/shared/models/models.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -14,14 +14,14 @@ class MockTodoCubit extends MockCubit<TodoState> implements TodoCubit {}
 
 class MockTodoState extends Mock implements TodoState {}
 
-class MockTodoRepository extends Mock implements TodoRepository {}
+class MockTodoRepository extends Mock implements ITodoRepository {}
 
-class MockHiveRepository extends Mock implements HiveRepository {}
+class MockHiveRepository extends Mock implements IHiveRepository {}
 
 class TestModule extends Module {
   final TodoCubit todoCubit;
-  final TodoRepository todoRepository;
-  final HiveRepository hiveRepository;
+  final ITodoRepository todoRepository;
+  final IHiveRepository hiveRepository;
 
   TestModule({
     required this.todoCubit,
@@ -49,8 +49,7 @@ void main() {
   setUp(() {
     mockTodoRepository = MockTodoRepository();
     mockHiveRepository = MockHiveRepository();
-    mockTodoCubit = TodoCubit(
-        todoRepository: mockTodoRepository, hiveRepository: mockHiveRepository);
+    mockTodoCubit = TodoCubit(iTodoRepository: mockTodoRepository);
     Modular.bindModule(TestModule(
       todoCubit: mockTodoCubit,
       todoRepository: mockTodoRepository,

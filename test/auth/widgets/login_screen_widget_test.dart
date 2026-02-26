@@ -1,3 +1,19 @@
+import 'package:fire_todo/feature/auth/data/repositories/auth_repository_impl.dart';
+import 'package:fire_todo/feature/auth/domain/models/models.dart';
+import 'package:fire_todo/feature/auth/presentation/cubit/auth_cubit.dart';
+import 'package:fire_todo/feature/auth/presentation/screens/screens.dart';
+import 'package:fire_todo/feature/home/presentation/screens/screens.dart';
+import 'package:fire_todo/feature/profile/data/repositories/profile_repository_impl.dart';
+import 'package:fire_todo/feature/profile/presentation/cubit/profile_cubit.dart';
+import 'package:fire_todo/feature/todo/domain/models/models.dart';
+import 'package:fire_todo/feature/todo/domain/repositories/i_todo_repository.dart';
+import 'package:fire_todo/feature/todo/presentation/cubit/todo_cubit.dart';
+import 'package:fire_todo/routes/app_module.dart';
+import 'package:fire_todo/shared/local_db/domain/i_hive_repository.dart';
+import 'package:fire_todo/shared/local_db/domain/models/profile_hive.dart';
+import 'package:fire_todo/shared/local_db/presentation/hive_controller.dart';
+import 'package:fire_todo/shared/models/models.dart';
+import 'package:fire_todo/shared/storage/domain/i_storage_token_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -9,35 +25,19 @@ import 'package:loader_overlay/loader_overlay.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:fire_todo/feature/auth/cubit/auth_cubit.dart';
-import 'package:fire_todo/feature/auth/domain/models/models.dart';
-import 'package:fire_todo/feature/auth/domain/services/services.dart';
-import 'package:fire_todo/feature/auth/screens/screens.dart';
-import 'package:fire_todo/feature/home/screens/screens.dart';
-import 'package:fire_todo/feature/profile/cubit/profile_cubit.dart';
-import 'package:fire_todo/feature/profile/domain/services/services.dart';
-import 'package:fire_todo/feature/todo/cubit/todo_cubit.dart';
-import 'package:fire_todo/feature/todo/domain/models/models.dart';
-import 'package:fire_todo/feature/todo/domain/services/services.dart';
-import 'package:fire_todo/hive/boxes.dart';
-import 'package:fire_todo/hive/profile_hive.dart';
-import 'package:fire_todo/routes/routes.dart';
-import 'package:fire_todo/services/services.dart';
-import 'package:fire_todo/storage/storage.dart';
-
 //* Mock class
-class MockAuthRepository extends Mock implements AuthRepository {}
+class MockAuthRepository extends Mock implements AuthRepositoryImpl {}
 
-class MockProfileRepository extends Mock implements ProfileRepository {}
+class MockProfileRepository extends Mock implements ProfileRepositoryImpl {}
 
-class MockTodoRepository extends Mock implements TodoRepository {}
+class MockTodoRepository extends Mock implements ITodoRepository {}
 
-class MockHiveRepository extends Mock implements HiveRepository {}
+class MockHiveRepository extends Mock implements IHiveRepository {}
 
 class MockHiveController extends Mock implements HiveController {}
 
 class MockStorageTokenRepository extends Mock
-    implements StorageTokenRepository {}
+    implements IStorageTokenRepository {}
 
 class MockHiveBox extends Mock implements Box<ProfileHive> {}
 
@@ -48,13 +48,13 @@ void main() {
   late AuthCubit mockAuthCubit;
   late ProfileCubit mockProfileCubit;
   late TodoCubit mockTodoCubit;
-  late AuthRepository mockRepository;
-  late ProfileRepository mockProfileRepository;
-  late TodoRepository mockTodoRepository;
+  late AuthRepositoryImpl mockRepository;
+  late ProfileRepositoryImpl mockProfileRepository;
+  late ITodoRepository mockTodoRepository;
   late IModularNavigator navigator;
-  late HiveRepository mockHiveRepository;
+  late IHiveRepository mockHiveRepository;
   late Box<ProfileHive> mockHiveBox;
-  late StorageTokenRepository mockStorageRepository;
+  late IStorageTokenRepository mockStorageRepository;
 
   const logoApp = Key('logoApp');
   const welcomeBack = Key('welcomeBack');
@@ -68,17 +68,16 @@ void main() {
 
   setUp(() {
     mockAuthCubit = AuthCubit(
-      authRepository: mockRepository,
-      storageRepository: mockStorageRepository,
-      hiveRepository: mockHiveRepository,
+      iAuthRepository: mockRepository,
+      iStorageTokenRepository: mockStorageRepository,
+      iHiveRepository: mockHiveRepository,
     );
     mockProfileCubit = ProfileCubit(
-      profileRepository: mockProfileRepository,
-      hiveRepository: mockHiveRepository,
-      storageTokenRepository: mockStorageRepository,
+      iProfileRepository: mockProfileRepository,
+      iHiveRepository: mockHiveRepository,
+      iStorageTokenRepository: mockStorageRepository,
     );
-    mockTodoCubit = TodoCubit(
-        todoRepository: mockTodoRepository, hiveRepository: mockHiveRepository);
+    mockTodoCubit = TodoCubit(iTodoRepository: mockTodoRepository);
     // authCubit.stream.listen((state) => debugPrint('Current state: $state'));
   });
 

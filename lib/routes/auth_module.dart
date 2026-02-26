@@ -1,4 +1,6 @@
-part of 'routes.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
+import '../feature/auth/presentation/screens/screens.dart';
 
 class AuthModule extends Module {
   @override

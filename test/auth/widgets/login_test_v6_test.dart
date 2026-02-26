@@ -1,9 +1,9 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:fire_todo/feature/auth/cubit/auth_cubit.dart';
 import 'package:fire_todo/feature/auth/domain/models/models.dart';
-import 'package:fire_todo/feature/auth/screens/screens.dart';
-import 'package:fire_todo/feature/profile/cubit/profile_cubit.dart';
-import 'package:fire_todo/shared/shared.dart';
+import 'package:fire_todo/feature/auth/presentation/cubit/auth_cubit.dart';
+import 'package:fire_todo/feature/auth/presentation/screens/screens.dart';
+import 'package:fire_todo/feature/profile/presentation/cubit/profile_cubit.dart';
+import 'package:fire_todo/shared/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_test/flutter_test.dart';

@@ -1,4 +1,4 @@
-part of 'constant.dart';
+import 'package:flutter/material.dart';
 
 class ColorApp {
   const ColorApp._();
@@ -97,18 +97,4 @@ class ColorApp {
   static const black = Color(0xFF000000);
   static const white = Color(0xFFFFFFFF);
   static const grey = Color(0xFF757575);
-
-  // static const primary = Color(0xFFFF6B35);
-  // static const primary2 = Color(0xFFFF3B30);
-  // static const secondary = Color(0xFFFFC107);
-  // static const backgroundLight = Color(0xFFF9FAFB);
-  // static const backgroundDark = Color(0xFF1E1E1E);
-  // static const textPrimary = Color(0xFF212121);
-  // static const textSecondary = Color(0xFF757575);
-  // static const success = Color(0xFF4CAF50);
-  // static const upcoming = Color(0xFF2196F3);
-  // static const past = Color(0xFF9E9E9E);
-  // static const black = Color(0xFF000000);
-  // static const white = Color(0xFFFFFFFF);
-  // static const grey = Color(0xFFF5F5F5);
 }

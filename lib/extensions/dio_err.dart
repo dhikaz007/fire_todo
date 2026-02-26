@@ -1,4 +1,11 @@
-part of 'extensions.dart';
+import 'dart:async';
+import 'dart:convert';
+
+import 'package:dio/dio.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
+import '../shared/models/error_response_model.dart';
+import '../shared/storage/data/storage_token_repository_impl.dart';
 
 extension DioErrorExtension on DioException {
   String errorMessageCustom() {
@@ -62,7 +69,7 @@ extension DioErrorExtension on DioException {
       case 400:
         return apiMessage ?? "⚠️ Bad Request";
       case 401:
-        unawaited(StorageTokenService().removeAllToken());
+        unawaited(StorageTokenRepositoryImpl().removeAllToken());
         scheduleMicrotask(() => Modular.to.navigate('/'));
         return apiMessage ??
             "🔒 Unauthorized - Sesi habis atau token tidak valid";

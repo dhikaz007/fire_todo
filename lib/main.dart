@@ -6,11 +6,12 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import 'constant/constant.dart';
-import 'hive/profile_hive.dart';
-import 'routes/routes.dart';
-import 'services/services.dart';
-import 'shared/shared.dart';
+import 'constant/color.dart';
+import 'routes/app_module.dart';
+import 'shared/local_db/domain/models/profile_hive.dart';
+import 'shared/logging/app_logger.dart';
+import 'shared/widgets/button_double_back.dart';
+import 'shared/widgets/loading.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
