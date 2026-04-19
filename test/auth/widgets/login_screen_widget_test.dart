@@ -19,7 +19,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:hive_test/hive_test.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:mocktail/mocktail.dart';

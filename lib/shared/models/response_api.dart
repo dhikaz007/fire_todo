@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'response_api.freezed.dart';
 
 @Freezed(genericArgumentFactories: true, toStringOverride: true)
-class ResponseAPI<T> with _$ResponseAPI<T> {
+sealed class ResponseAPI<T> with _$ResponseAPI<T> {
   const factory ResponseAPI({T? data}) = _ResponseAPI<T>;
 
   factory ResponseAPI.fromValue(T value) => ResponseAPI(data: value);

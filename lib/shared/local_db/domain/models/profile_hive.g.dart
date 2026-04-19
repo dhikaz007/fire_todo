@@ -3,12 +3,12 @@
 part of 'profile_hive.dart';
 
 // **************************************************************************
-// TypeAdapterGenerator
+// AdaptersGenerator
 // **************************************************************************
 
 class ProfileHiveAdapter extends TypeAdapter<ProfileHive> {
   @override
-  final int typeId = 0;
+  final typeId = 0;
 
   @override
   ProfileHive read(BinaryReader reader) {

@@ -6,20 +6,20 @@ part of 'list_todo_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ListTodoModelImpl _$$ListTodoModelImplFromJson(Map<String, dynamic> json) =>
-    _$ListTodoModelImpl(
+_ListTodoModel _$ListTodoModelFromJson(Map<String, dynamic> json) =>
+    _ListTodoModel(
       documents: (json['documents'] as List<dynamic>?)
           ?.map((e) => DocumentModel.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$ListTodoModelImplToJson(_$ListTodoModelImpl instance) =>
+Map<String, dynamic> _$ListTodoModelToJson(_ListTodoModel instance) =>
     <String, dynamic>{
       'documents': instance.documents,
     };
 
-_$DocumentModelImpl _$$DocumentModelImplFromJson(Map<String, dynamic> json) =>
-    _$DocumentModelImpl(
+_DocumentModel _$DocumentModelFromJson(Map<String, dynamic> json) =>
+    _DocumentModel(
       name: json['name'] as String?,
       fields: json['fields'] == null
           ? null
@@ -32,7 +32,7 @@ _$DocumentModelImpl _$$DocumentModelImplFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['updateTime'] as String),
     );
 
-Map<String, dynamic> _$$DocumentModelImplToJson(_$DocumentModelImpl instance) =>
+Map<String, dynamic> _$DocumentModelToJson(_DocumentModel instance) =>
     <String, dynamic>{
       'name': instance.name,
       'fields': instance.fields,
@@ -40,8 +40,7 @@ Map<String, dynamic> _$$DocumentModelImplToJson(_$DocumentModelImpl instance) =>
       'updateTime': instance.updateTime?.toIso8601String(),
     };
 
-_$FieldsModelImpl _$$FieldsModelImplFromJson(Map<String, dynamic> json) =>
-    _$FieldsModelImpl(
+_FieldsModel _$FieldsModelFromJson(Map<String, dynamic> json) => _FieldsModel(
       title: json['title'] == null
           ? null
           : DescriptionValueModel.fromJson(
@@ -58,7 +57,7 @@ _$FieldsModelImpl _$$FieldsModelImplFromJson(Map<String, dynamic> json) =>
           : DueDateValueModel.fromJson(json['dueDate'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$FieldsModelImplToJson(_$FieldsModelImpl instance) =>
+Map<String, dynamic> _$FieldsModelToJson(_FieldsModel instance) =>
     <String, dynamic>{
       'title': instance.title,
       'description': instance.description,
@@ -66,40 +65,36 @@ Map<String, dynamic> _$$FieldsModelImplToJson(_$FieldsModelImpl instance) =>
       'dueDate': instance.dueDate,
     };
 
-_$DueDateValueModelImpl _$$DueDateValueModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$DueDateValueModelImpl(
+_DueDateValueModel _$DueDateValueModelFromJson(Map<String, dynamic> json) =>
+    _DueDateValueModel(
       timestampValue: const FirestoreDateTimeConverter()
           .fromJson(json['timestampValue'] as String?),
     );
 
-Map<String, dynamic> _$$DueDateValueModelImplToJson(
-        _$DueDateValueModelImpl instance) =>
+Map<String, dynamic> _$DueDateValueModelToJson(_DueDateValueModel instance) =>
     <String, dynamic>{
       'timestampValue':
           const FirestoreDateTimeConverter().toJson(instance.timestampValue),
     };
 
-_$DescriptionValueModelImpl _$$DescriptionValueModelImplFromJson(
+_DescriptionValueModel _$DescriptionValueModelFromJson(
         Map<String, dynamic> json) =>
-    _$DescriptionValueModelImpl(
+    _DescriptionValueModel(
       stringValue: json['stringValue'] as String?,
     );
 
-Map<String, dynamic> _$$DescriptionValueModelImplToJson(
-        _$DescriptionValueModelImpl instance) =>
+Map<String, dynamic> _$DescriptionValueModelToJson(
+        _DescriptionValueModel instance) =>
     <String, dynamic>{
       'stringValue': instance.stringValue,
     };
 
-_$IsDoneValueModelImpl _$$IsDoneValueModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$IsDoneValueModelImpl(
+_IsDoneValueModel _$IsDoneValueModelFromJson(Map<String, dynamic> json) =>
+    _IsDoneValueModel(
       booleanValue: json['booleanValue'] as bool?,
     );
 
-Map<String, dynamic> _$$IsDoneValueModelImplToJson(
-        _$IsDoneValueModelImpl instance) =>
+Map<String, dynamic> _$IsDoneValueModelToJson(_IsDoneValueModel instance) =>
     <String, dynamic>{
       'booleanValue': instance.booleanValue,
     };

@@ -6,8 +6,7 @@ part of 'login_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LoginModelImpl _$$LoginModelImplFromJson(Map<String, dynamic> json) =>
-    _$LoginModelImpl(
+_LoginModel _$LoginModelFromJson(Map<String, dynamic> json) => _LoginModel(
       kind: json['kind'] as String?,
       localId: json['localId'] as String?,
       email: json['email'] as String?,
@@ -18,7 +17,7 @@ _$LoginModelImpl _$$LoginModelImplFromJson(Map<String, dynamic> json) =>
       expiresIn: json['expiresIn'] as String?,
     );
 
-Map<String, dynamic> _$$LoginModelImplToJson(_$LoginModelImpl instance) =>
+Map<String, dynamic> _$LoginModelToJson(_LoginModel instance) =>
     <String, dynamic>{
       'kind': instance.kind,
       'localId': instance.localId,

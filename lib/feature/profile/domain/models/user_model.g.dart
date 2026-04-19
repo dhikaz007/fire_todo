@@ -6,23 +6,21 @@ part of 'user_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserModelImpl _$$UserModelImplFromJson(Map<String, dynamic> json) =>
-    _$UserModelImpl(
+_UserModel _$UserModelFromJson(Map<String, dynamic> json) => _UserModel(
       kind: json['kind'] as String?,
       users: (json['users'] as List<dynamic>?)
           ?.map((e) => UserElementData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$UserModelImplToJson(_$UserModelImpl instance) =>
+Map<String, dynamic> _$UserModelToJson(_UserModel instance) =>
     <String, dynamic>{
       'kind': instance.kind,
       'users': instance.users,
     };
 
-_$UserElementDataImpl _$$UserElementDataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UserElementDataImpl(
+_UserElementData _$UserElementDataFromJson(Map<String, dynamic> json) =>
+    _UserElementData(
       localId: json['localId'] as String?,
       email: json['email'] as String?,
       displayName: json['displayName'] as String?,
@@ -41,8 +39,7 @@ _$UserElementDataImpl _$$UserElementDataImplFromJson(
           : DateTime.parse(json['lastRefreshAt'] as String),
     );
 
-Map<String, dynamic> _$$UserElementDataImplToJson(
-        _$UserElementDataImpl instance) =>
+Map<String, dynamic> _$UserElementDataToJson(_UserElementData instance) =>
     <String, dynamic>{
       'localId': instance.localId,
       'email': instance.email,
@@ -58,9 +55,8 @@ Map<String, dynamic> _$$UserElementDataImplToJson(
       'lastRefreshAt': instance.lastRefreshAt?.toIso8601String(),
     };
 
-_$ProviderUserInfoImpl _$$ProviderUserInfoImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ProviderUserInfoImpl(
+_ProviderUserInfo _$ProviderUserInfoFromJson(Map<String, dynamic> json) =>
+    _ProviderUserInfo(
       providerId: json['providerId'] as String?,
       displayName: json['displayName'] as String?,
       federatedId: json['federatedId'] as String?,
@@ -68,8 +64,7 @@ _$ProviderUserInfoImpl _$$ProviderUserInfoImplFromJson(
       rawId: json['rawId'] as String?,
     );
 
-Map<String, dynamic> _$$ProviderUserInfoImplToJson(
-        _$ProviderUserInfoImpl instance) =>
+Map<String, dynamic> _$ProviderUserInfoToJson(_ProviderUserInfo instance) =>
     <String, dynamic>{
       'providerId': instance.providerId,
       'displayName': instance.displayName,

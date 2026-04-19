@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,64 +9,45 @@ part of 'profile_cubit.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ProfileState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(UserModel response) loaded,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function(DeleteAccountModel response) delete,
-    required TResult Function(RequestEmailModel response) reset,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(UserModel response)? loaded,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function(DeleteAccountModel response)? delete,
-    TResult? Function(RequestEmailModel response)? reset,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(UserModel response)? loaded,
-    TResult Function(String errorMessage)? failed,
-    TResult Function(DeleteAccountModel response)? delete,
-    TResult Function(RequestEmailModel response)? reset,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_Delete value) delete,
-    required TResult Function(_Reset value) reset,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_Delete value)? delete,
-    TResult? Function(_Reset value)? reset,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is ProfileState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'ProfileState()';
+  }
+}
+
+/// @nodoc
+class $ProfileStateCopyWith<$Res> {
+  $ProfileStateCopyWith(ProfileState _, $Res Function(ProfileState) __);
+}
+
+/// Adds pattern-matching-related methods to [ProfileState].
+extension ProfileStatePatterns on ProfileState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
@@ -76,340 +57,290 @@ mixin _$ProfileState {
     TResult Function(_Delete value)? delete,
     TResult Function(_Reset value)? reset,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case _Loading() when loading != null:
+        return loading(_that);
+      case _Loaded() when loaded != null:
+        return loaded(_that);
+      case _Failed() when failed != null:
+        return failed(_that);
+      case _Delete() when delete != null:
+        return delete(_that);
+      case _Reset() when reset != null:
+        return reset(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Failed value) failed,
+    required TResult Function(_Delete value) delete,
+    required TResult Function(_Reset value) reset,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial(_that);
+      case _Loading():
+        return loading(_that);
+      case _Loaded():
+        return loaded(_that);
+      case _Failed():
+        return failed(_that);
+      case _Delete():
+        return delete(_that);
+      case _Reset():
+        return reset(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Failed value)? failed,
+    TResult? Function(_Delete value)? delete,
+    TResult? Function(_Reset value)? reset,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case _Loading() when loading != null:
+        return loading(_that);
+      case _Loaded() when loaded != null:
+        return loaded(_that);
+      case _Failed() when failed != null:
+        return failed(_that);
+      case _Delete() when delete != null:
+        return delete(_that);
+      case _Reset() when reset != null:
+        return reset(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(UserModel response)? loaded,
+    TResult Function(String errorMessage)? failed,
+    TResult Function(DeleteAccountModel response)? delete,
+    TResult Function(RequestEmailModel response)? reset,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case _Loading() when loading != null:
+        return loading();
+      case _Loaded() when loaded != null:
+        return loaded(_that.response);
+      case _Failed() when failed != null:
+        return failed(_that.errorMessage);
+      case _Delete() when delete != null:
+        return delete(_that.response);
+      case _Reset() when reset != null:
+        return reset(_that.response);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(UserModel response) loaded,
+    required TResult Function(String errorMessage) failed,
+    required TResult Function(DeleteAccountModel response) delete,
+    required TResult Function(RequestEmailModel response) reset,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial();
+      case _Loading():
+        return loading();
+      case _Loaded():
+        return loaded(_that.response);
+      case _Failed():
+        return failed(_that.errorMessage);
+      case _Delete():
+        return delete(_that.response);
+      case _Reset():
+        return reset(_that.response);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(UserModel response)? loaded,
+    TResult? Function(String errorMessage)? failed,
+    TResult? Function(DeleteAccountModel response)? delete,
+    TResult? Function(RequestEmailModel response)? reset,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case _Loading() when loading != null:
+        return loading();
+      case _Loaded() when loaded != null:
+        return loaded(_that.response);
+      case _Failed() when failed != null:
+        return failed(_that.errorMessage);
+      case _Delete() when delete != null:
+        return delete(_that.response);
+      case _Reset() when reset != null:
+        return reset(_that.response);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $ProfileStateCopyWith<$Res> {
-  factory $ProfileStateCopyWith(
-          ProfileState value, $Res Function(ProfileState) then) =
-      _$ProfileStateCopyWithImpl<$Res, ProfileState>;
-}
 
-/// @nodoc
-class _$ProfileStateCopyWithImpl<$Res, $Val extends ProfileState>
-    implements $ProfileStateCopyWith<$Res> {
-  _$ProfileStateCopyWithImpl(this._value, this._then);
+class _Initial implements ProfileState {
+  const _Initial();
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initial);
+  }
 
-/// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'ProfileState.initial()';
   }
+}
+
+/// @nodoc
+
+class _Loading implements ProfileState {
+  const _Loading();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is _Loading);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(UserModel response) loaded,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function(DeleteAccountModel response) delete,
-    required TResult Function(RequestEmailModel response) reset,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(UserModel response)? loaded,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function(DeleteAccountModel response)? delete,
-    TResult? Function(RequestEmailModel response)? reset,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(UserModel response)? loaded,
-    TResult Function(String errorMessage)? failed,
-    TResult Function(DeleteAccountModel response)? delete,
-    TResult Function(RequestEmailModel response)? reset,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_Delete value) delete,
-    required TResult Function(_Reset value) reset,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_Delete value)? delete,
-    TResult? Function(_Reset value)? reset,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_Delete value)? delete,
-    TResult Function(_Reset value)? reset,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements ProfileState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
-      __$$LoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$LoadingImpl>
-    implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingImpl implements _Loading {
-  const _$LoadingImpl();
 
   @override
   String toString() {
     return 'ProfileState.loading()';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(UserModel response) loaded,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function(DeleteAccountModel response) delete,
-    required TResult Function(RequestEmailModel response) reset,
-  }) {
-    return loading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(UserModel response)? loaded,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function(DeleteAccountModel response)? delete,
-    TResult? Function(RequestEmailModel response)? reset,
-  }) {
-    return loading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(UserModel response)? loaded,
-    TResult Function(String errorMessage)? failed,
-    TResult Function(DeleteAccountModel response)? delete,
-    TResult Function(RequestEmailModel response)? reset,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_Delete value) delete,
-    required TResult Function(_Reset value) reset,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_Delete value)? delete,
-    TResult? Function(_Reset value)? reset,
-  }) {
-    return loading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_Delete value)? delete,
-    TResult Function(_Reset value)? reset,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Loading implements ProfileState {
-  const factory _Loading() = _$LoadingImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadedImplCopyWith<$Res> {
-  factory _$$LoadedImplCopyWith(
-          _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
-      __$$LoadedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({UserModel response});
-
-  $UserModelCopyWith<$Res> get response;
-}
-
-/// @nodoc
-class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$LoadedImpl>
-    implements _$$LoadedImplCopyWith<$Res> {
-  __$$LoadedImplCopyWithImpl(
-      _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? response = null,
-  }) {
-    return _then(_$LoadedImpl(
-      response: null == response
-          ? _value.response
-          : response // ignore: cast_nullable_to_non_nullable
-              as UserModel,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UserModelCopyWith<$Res> get response {
-    return $UserModelCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
-    });
-  }
 }
 
 /// @nodoc
 
-class _$LoadedImpl implements _Loaded {
-  const _$LoadedImpl({this.response = const UserModel()});
+class _Loaded implements ProfileState {
+  const _Loaded({this.response = const UserModel()});
 
-  @override
   @JsonKey()
   final UserModel response;
 
-  @override
-  String toString() {
-    return 'ProfileState.loaded(response: $response)';
-  }
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$LoadedCopyWith<_Loaded> get copyWith =>
+      __$LoadedCopyWithImpl<_Loaded>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoadedImpl &&
+            other is _Loaded &&
             (identical(other.response, response) ||
                 other.response == response));
   }
@@ -417,133 +348,113 @@ class _$LoadedImpl implements _Loaded {
   @override
   int get hashCode => Object.hash(runtimeType, response);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
-      __$$LoadedImplCopyWithImpl<_$LoadedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(UserModel response) loaded,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function(DeleteAccountModel response) delete,
-    required TResult Function(RequestEmailModel response) reset,
-  }) {
-    return loaded(response);
+  String toString() {
+    return 'ProfileState.loaded(response: $response)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(UserModel response)? loaded,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function(DeleteAccountModel response)? delete,
-    TResult? Function(RequestEmailModel response)? reset,
-  }) {
-    return loaded?.call(response);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(UserModel response)? loaded,
-    TResult Function(String errorMessage)? failed,
-    TResult Function(DeleteAccountModel response)? delete,
-    TResult Function(RequestEmailModel response)? reset,
-    required TResult orElse(),
-  }) {
-    if (loaded != null) {
-      return loaded(response);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_Delete value) delete,
-    required TResult Function(_Reset value) reset,
-  }) {
-    return loaded(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_Delete value)? delete,
-    TResult? Function(_Reset value)? reset,
-  }) {
-    return loaded?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_Delete value)? delete,
-    TResult Function(_Reset value)? reset,
-    required TResult orElse(),
-  }) {
-    if (loaded != null) {
-      return loaded(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Loaded implements ProfileState {
-  const factory _Loaded({final UserModel response}) = _$LoadedImpl;
-
-  UserModel get response;
-  @JsonKey(ignore: true)
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FailedImplCopyWith<$Res> {
-  factory _$$FailedImplCopyWith(
-          _$FailedImpl value, $Res Function(_$FailedImpl) then) =
-      __$$FailedImplCopyWithImpl<$Res>;
+abstract mixin class _$LoadedCopyWith<$Res>
+    implements $ProfileStateCopyWith<$Res> {
+  factory _$LoadedCopyWith(_Loaded value, $Res Function(_Loaded) _then) =
+      __$LoadedCopyWithImpl;
+  @useResult
+  $Res call({UserModel response});
+
+  $UserModelCopyWith<$Res> get response;
+}
+
+/// @nodoc
+class __$LoadedCopyWithImpl<$Res> implements _$LoadedCopyWith<$Res> {
+  __$LoadedCopyWithImpl(this._self, this._then);
+
+  final _Loaded _self;
+  final $Res Function(_Loaded) _then;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? response = null,
+  }) {
+    return _then(_Loaded(
+      response: null == response
+          ? _self.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as UserModel,
+    ));
+  }
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UserModelCopyWith<$Res> get response {
+    return $UserModelCopyWith<$Res>(_self.response, (value) {
+      return _then(_self.copyWith(response: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _Failed implements ProfileState {
+  const _Failed({this.errorMessage = ''});
+
+  @JsonKey()
+  final String errorMessage;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FailedCopyWith<_Failed> get copyWith =>
+      __$FailedCopyWithImpl<_Failed>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Failed &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorMessage);
+
+  @override
+  String toString() {
+    return 'ProfileState.failed(errorMessage: $errorMessage)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FailedCopyWith<$Res>
+    implements $ProfileStateCopyWith<$Res> {
+  factory _$FailedCopyWith(_Failed value, $Res Function(_Failed) _then) =
+      __$FailedCopyWithImpl;
   @useResult
   $Res call({String errorMessage});
 }
 
 /// @nodoc
-class __$$FailedImplCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$FailedImpl>
-    implements _$$FailedImplCopyWith<$Res> {
-  __$$FailedImplCopyWithImpl(
-      _$FailedImpl _value, $Res Function(_$FailedImpl) _then)
-      : super(_value, _then);
+class __$FailedCopyWithImpl<$Res> implements _$FailedCopyWith<$Res> {
+  __$FailedCopyWithImpl(this._self, this._then);
 
+  final _Failed _self;
+  final $Res Function(_Failed) _then;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? errorMessage = null,
   }) {
-    return _then(_$FailedImpl(
+    return _then(_Failed(
       errorMessage: null == errorMessage
-          ? _value.errorMessage
+          ? _self.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -552,137 +463,42 @@ class __$$FailedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FailedImpl implements _Failed {
-  const _$FailedImpl({this.errorMessage = ''});
+class _Delete implements ProfileState {
+  const _Delete({this.response = const DeleteAccountModel()});
 
-  @override
   @JsonKey()
-  final String errorMessage;
+  final DeleteAccountModel response;
 
-  @override
-  String toString() {
-    return 'ProfileState.failed(errorMessage: $errorMessage)';
-  }
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$DeleteCopyWith<_Delete> get copyWith =>
+      __$DeleteCopyWithImpl<_Delete>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FailedImpl &&
-            (identical(other.errorMessage, errorMessage) ||
-                other.errorMessage == errorMessage));
+            other is _Delete &&
+            (identical(other.response, response) ||
+                other.response == response));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, errorMessage);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FailedImplCopyWith<_$FailedImpl> get copyWith =>
-      __$$FailedImplCopyWithImpl<_$FailedImpl>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, response);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(UserModel response) loaded,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function(DeleteAccountModel response) delete,
-    required TResult Function(RequestEmailModel response) reset,
-  }) {
-    return failed(errorMessage);
+  String toString() {
+    return 'ProfileState.delete(response: $response)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(UserModel response)? loaded,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function(DeleteAccountModel response)? delete,
-    TResult? Function(RequestEmailModel response)? reset,
-  }) {
-    return failed?.call(errorMessage);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(UserModel response)? loaded,
-    TResult Function(String errorMessage)? failed,
-    TResult Function(DeleteAccountModel response)? delete,
-    TResult Function(RequestEmailModel response)? reset,
-    required TResult orElse(),
-  }) {
-    if (failed != null) {
-      return failed(errorMessage);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_Delete value) delete,
-    required TResult Function(_Reset value) reset,
-  }) {
-    return failed(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_Delete value)? delete,
-    TResult? Function(_Reset value)? reset,
-  }) {
-    return failed?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_Delete value)? delete,
-    TResult Function(_Reset value)? reset,
-    required TResult orElse(),
-  }) {
-    if (failed != null) {
-      return failed(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Failed implements ProfileState {
-  const factory _Failed({final String errorMessage}) = _$FailedImpl;
-
-  String get errorMessage;
-  @JsonKey(ignore: true)
-  _$$FailedImplCopyWith<_$FailedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DeleteImplCopyWith<$Res> {
-  factory _$$DeleteImplCopyWith(
-          _$DeleteImpl value, $Res Function(_$DeleteImpl) then) =
-      __$$DeleteImplCopyWithImpl<$Res>;
+abstract mixin class _$DeleteCopyWith<$Res>
+    implements $ProfileStateCopyWith<$Res> {
+  factory _$DeleteCopyWith(_Delete value, $Res Function(_Delete) _then) =
+      __$DeleteCopyWithImpl;
   @useResult
   $Res call({DeleteAccountModel response});
 
@@ -690,54 +506,57 @@ abstract class _$$DeleteImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$DeleteImplCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$DeleteImpl>
-    implements _$$DeleteImplCopyWith<$Res> {
-  __$$DeleteImplCopyWithImpl(
-      _$DeleteImpl _value, $Res Function(_$DeleteImpl) _then)
-      : super(_value, _then);
+class __$DeleteCopyWithImpl<$Res> implements _$DeleteCopyWith<$Res> {
+  __$DeleteCopyWithImpl(this._self, this._then);
 
+  final _Delete _self;
+  final $Res Function(_Delete) _then;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? response = null,
   }) {
-    return _then(_$DeleteImpl(
+    return _then(_Delete(
       response: null == response
-          ? _value.response
+          ? _self.response
           : response // ignore: cast_nullable_to_non_nullable
               as DeleteAccountModel,
     ));
   }
 
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DeleteAccountModelCopyWith<$Res> get response {
-    return $DeleteAccountModelCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
+    return $DeleteAccountModelCopyWith<$Res>(_self.response, (value) {
+      return _then(_self.copyWith(response: value));
     });
   }
 }
 
 /// @nodoc
 
-class _$DeleteImpl implements _Delete {
-  const _$DeleteImpl({this.response = const DeleteAccountModel()});
+class _Reset implements ProfileState {
+  const _Reset({this.response = const RequestEmailModel()});
 
-  @override
   @JsonKey()
-  final DeleteAccountModel response;
+  final RequestEmailModel response;
 
-  @override
-  String toString() {
-    return 'ProfileState.delete(response: $response)';
-  }
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$ResetCopyWith<_Reset> get copyWith =>
+      __$ResetCopyWithImpl<_Reset>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteImpl &&
+            other is _Reset &&
             (identical(other.response, response) ||
                 other.response == response));
   }
@@ -745,113 +564,17 @@ class _$DeleteImpl implements _Delete {
   @override
   int get hashCode => Object.hash(runtimeType, response);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$DeleteImplCopyWith<_$DeleteImpl> get copyWith =>
-      __$$DeleteImplCopyWithImpl<_$DeleteImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(UserModel response) loaded,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function(DeleteAccountModel response) delete,
-    required TResult Function(RequestEmailModel response) reset,
-  }) {
-    return delete(response);
+  String toString() {
+    return 'ProfileState.reset(response: $response)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(UserModel response)? loaded,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function(DeleteAccountModel response)? delete,
-    TResult? Function(RequestEmailModel response)? reset,
-  }) {
-    return delete?.call(response);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(UserModel response)? loaded,
-    TResult Function(String errorMessage)? failed,
-    TResult Function(DeleteAccountModel response)? delete,
-    TResult Function(RequestEmailModel response)? reset,
-    required TResult orElse(),
-  }) {
-    if (delete != null) {
-      return delete(response);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_Delete value) delete,
-    required TResult Function(_Reset value) reset,
-  }) {
-    return delete(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_Delete value)? delete,
-    TResult? Function(_Reset value)? reset,
-  }) {
-    return delete?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_Delete value)? delete,
-    TResult Function(_Reset value)? reset,
-    required TResult orElse(),
-  }) {
-    if (delete != null) {
-      return delete(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Delete implements ProfileState {
-  const factory _Delete({final DeleteAccountModel response}) = _$DeleteImpl;
-
-  DeleteAccountModel get response;
-  @JsonKey(ignore: true)
-  _$$DeleteImplCopyWith<_$DeleteImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ResetImplCopyWith<$Res> {
-  factory _$$ResetImplCopyWith(
-          _$ResetImpl value, $Res Function(_$ResetImpl) then) =
-      __$$ResetImplCopyWithImpl<$Res>;
+abstract mixin class _$ResetCopyWith<$Res>
+    implements $ProfileStateCopyWith<$Res> {
+  factory _$ResetCopyWith(_Reset value, $Res Function(_Reset) _then) =
+      __$ResetCopyWithImpl;
   @useResult
   $Res call({RequestEmailModel response});
 
@@ -859,159 +582,35 @@ abstract class _$$ResetImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$ResetImplCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res, _$ResetImpl>
-    implements _$$ResetImplCopyWith<$Res> {
-  __$$ResetImplCopyWithImpl(
-      _$ResetImpl _value, $Res Function(_$ResetImpl) _then)
-      : super(_value, _then);
+class __$ResetCopyWithImpl<$Res> implements _$ResetCopyWith<$Res> {
+  __$ResetCopyWithImpl(this._self, this._then);
 
+  final _Reset _self;
+  final $Res Function(_Reset) _then;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? response = null,
   }) {
-    return _then(_$ResetImpl(
+    return _then(_Reset(
       response: null == response
-          ? _value.response
+          ? _self.response
           : response // ignore: cast_nullable_to_non_nullable
               as RequestEmailModel,
     ));
   }
 
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RequestEmailModelCopyWith<$Res> get response {
-    return $RequestEmailModelCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
+    return $RequestEmailModelCopyWith<$Res>(_self.response, (value) {
+      return _then(_self.copyWith(response: value));
     });
   }
 }
 
-/// @nodoc
-
-class _$ResetImpl implements _Reset {
-  const _$ResetImpl({this.response = const RequestEmailModel()});
-
-  @override
-  @JsonKey()
-  final RequestEmailModel response;
-
-  @override
-  String toString() {
-    return 'ProfileState.reset(response: $response)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ResetImpl &&
-            (identical(other.response, response) ||
-                other.response == response));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, response);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ResetImplCopyWith<_$ResetImpl> get copyWith =>
-      __$$ResetImplCopyWithImpl<_$ResetImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(UserModel response) loaded,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function(DeleteAccountModel response) delete,
-    required TResult Function(RequestEmailModel response) reset,
-  }) {
-    return reset(response);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(UserModel response)? loaded,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function(DeleteAccountModel response)? delete,
-    TResult? Function(RequestEmailModel response)? reset,
-  }) {
-    return reset?.call(response);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(UserModel response)? loaded,
-    TResult Function(String errorMessage)? failed,
-    TResult Function(DeleteAccountModel response)? delete,
-    TResult Function(RequestEmailModel response)? reset,
-    required TResult orElse(),
-  }) {
-    if (reset != null) {
-      return reset(response);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_Delete value) delete,
-    required TResult Function(_Reset value) reset,
-  }) {
-    return reset(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_Delete value)? delete,
-    TResult? Function(_Reset value)? reset,
-  }) {
-    return reset?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_Delete value)? delete,
-    TResult Function(_Reset value)? reset,
-    required TResult orElse(),
-  }) {
-    if (reset != null) {
-      return reset(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Reset implements ProfileState {
-  const factory _Reset({final RequestEmailModel response}) = _$ResetImpl;
-
-  RequestEmailModel get response;
-  @JsonKey(ignore: true)
-  _$$ResetImplCopyWith<_$ResetImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

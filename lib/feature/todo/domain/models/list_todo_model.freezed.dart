@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,99 +9,236 @@ part of 'list_todo_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-ListTodoModel _$ListTodoModelFromJson(Map<String, dynamic> json) {
-  return _ListTodoModel.fromJson(json);
-}
 
 /// @nodoc
 mixin _$ListTodoModel {
-  List<DocumentModel>? get documents => throw _privateConstructorUsedError;
+  List<DocumentModel>? get documents;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ListTodoModelCopyWith<ListTodoModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ListTodoModelCopyWith<$Res> {
-  factory $ListTodoModelCopyWith(
-          ListTodoModel value, $Res Function(ListTodoModel) then) =
-      _$ListTodoModelCopyWithImpl<$Res, ListTodoModel>;
-  @useResult
-  $Res call({List<DocumentModel>? documents});
-}
-
-/// @nodoc
-class _$ListTodoModelCopyWithImpl<$Res, $Val extends ListTodoModel>
-    implements $ListTodoModelCopyWith<$Res> {
-  _$ListTodoModelCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of ListTodoModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $ListTodoModelCopyWith<ListTodoModel> get copyWith =>
+      _$ListTodoModelCopyWithImpl<ListTodoModel>(
+          this as ListTodoModel, _$identity);
+
+  /// Serializes this ListTodoModel to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? documents = freezed,
-  }) {
-    return _then(_value.copyWith(
-      documents: freezed == documents
-          ? _value.documents
-          : documents // ignore: cast_nullable_to_non_nullable
-              as List<DocumentModel>?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ListTodoModel &&
+            const DeepCollectionEquality().equals(other.documents, documents));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(documents));
+
+  @override
+  String toString() {
+    return 'ListTodoModel(documents: $documents)';
   }
 }
 
 /// @nodoc
-abstract class _$$ListTodoModelImplCopyWith<$Res>
-    implements $ListTodoModelCopyWith<$Res> {
-  factory _$$ListTodoModelImplCopyWith(
-          _$ListTodoModelImpl value, $Res Function(_$ListTodoModelImpl) then) =
-      __$$ListTodoModelImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $ListTodoModelCopyWith<$Res> {
+  factory $ListTodoModelCopyWith(
+          ListTodoModel value, $Res Function(ListTodoModel) _then) =
+      _$ListTodoModelCopyWithImpl;
   @useResult
   $Res call({List<DocumentModel>? documents});
 }
 
 /// @nodoc
-class __$$ListTodoModelImplCopyWithImpl<$Res>
-    extends _$ListTodoModelCopyWithImpl<$Res, _$ListTodoModelImpl>
-    implements _$$ListTodoModelImplCopyWith<$Res> {
-  __$$ListTodoModelImplCopyWithImpl(
-      _$ListTodoModelImpl _value, $Res Function(_$ListTodoModelImpl) _then)
-      : super(_value, _then);
+class _$ListTodoModelCopyWithImpl<$Res>
+    implements $ListTodoModelCopyWith<$Res> {
+  _$ListTodoModelCopyWithImpl(this._self, this._then);
 
+  final ListTodoModel _self;
+  final $Res Function(ListTodoModel) _then;
+
+  /// Create a copy of ListTodoModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? documents = freezed,
   }) {
-    return _then(_$ListTodoModelImpl(
+    return _then(_self.copyWith(
       documents: freezed == documents
-          ? _value._documents
+          ? _self.documents
           : documents // ignore: cast_nullable_to_non_nullable
               as List<DocumentModel>?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [ListTodoModel].
+extension ListTodoModelPatterns on ListTodoModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_ListTodoModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ListTodoModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_ListTodoModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListTodoModel():
+        return $default(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_ListTodoModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListTodoModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(List<DocumentModel>? documents)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ListTodoModel() when $default != null:
+        return $default(_that.documents);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(List<DocumentModel>? documents) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListTodoModel():
+        return $default(_that.documents);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(List<DocumentModel>? documents)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListTodoModel() when $default != null:
+        return $default(_that.documents);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$ListTodoModelImpl implements _ListTodoModel {
-  const _$ListTodoModelImpl({final List<DocumentModel>? documents})
+class _ListTodoModel implements ListTodoModel {
+  const _ListTodoModel({final List<DocumentModel>? documents})
       : _documents = documents;
-
-  factory _$ListTodoModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListTodoModelImplFromJson(json);
+  factory _ListTodoModel.fromJson(Map<String, dynamic> json) =>
+      _$ListTodoModelFromJson(json);
 
   final List<DocumentModel>? _documents;
   @override
@@ -113,200 +250,355 @@ class _$ListTodoModelImpl implements _ListTodoModel {
     return EqualUnmodifiableListView(value);
   }
 
+  /// Create a copy of ListTodoModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'ListTodoModel(documents: $documents)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$ListTodoModelCopyWith<_ListTodoModel> get copyWith =>
+      __$ListTodoModelCopyWithImpl<_ListTodoModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$ListTodoModelToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ListTodoModelImpl &&
+            other is _ListTodoModel &&
             const DeepCollectionEquality()
                 .equals(other._documents, _documents));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_documents));
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$ListTodoModelImplCopyWith<_$ListTodoModelImpl> get copyWith =>
-      __$$ListTodoModelImplCopyWithImpl<_$ListTodoModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ListTodoModelImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _ListTodoModel implements ListTodoModel {
-  const factory _ListTodoModel({final List<DocumentModel>? documents}) =
-      _$ListTodoModelImpl;
-
-  factory _ListTodoModel.fromJson(Map<String, dynamic> json) =
-      _$ListTodoModelImpl.fromJson;
-
-  @override
-  List<DocumentModel>? get documents;
-  @override
-  @JsonKey(ignore: true)
-  _$$ListTodoModelImplCopyWith<_$ListTodoModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-DocumentModel _$DocumentModelFromJson(Map<String, dynamic> json) {
-  return _DocumentModel.fromJson(json);
-}
-
-/// @nodoc
-mixin _$DocumentModel {
-  String? get name => throw _privateConstructorUsedError;
-  FieldsModel? get fields => throw _privateConstructorUsedError;
-  DateTime? get createTime => throw _privateConstructorUsedError;
-  DateTime? get updateTime => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $DocumentModelCopyWith<DocumentModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $DocumentModelCopyWith<$Res> {
-  factory $DocumentModelCopyWith(
-          DocumentModel value, $Res Function(DocumentModel) then) =
-      _$DocumentModelCopyWithImpl<$Res, DocumentModel>;
-  @useResult
-  $Res call(
-      {String? name,
-      FieldsModel? fields,
-      DateTime? createTime,
-      DateTime? updateTime});
-
-  $FieldsModelCopyWith<$Res>? get fields;
-}
-
-/// @nodoc
-class _$DocumentModelCopyWithImpl<$Res, $Val extends DocumentModel>
-    implements $DocumentModelCopyWith<$Res> {
-  _$DocumentModelCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? fields = freezed,
-    Object? createTime = freezed,
-    Object? updateTime = freezed,
-  }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fields: freezed == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as FieldsModel?,
-      createTime: freezed == createTime
-          ? _value.createTime
-          : createTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      updateTime: freezed == updateTime
-          ? _value.updateTime
-          : updateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $FieldsModelCopyWith<$Res>? get fields {
-    if (_value.fields == null) {
-      return null;
-    }
-
-    return $FieldsModelCopyWith<$Res>(_value.fields!, (value) {
-      return _then(_value.copyWith(fields: value) as $Val);
-    });
+  String toString() {
+    return 'ListTodoModel(documents: $documents)';
   }
 }
 
 /// @nodoc
-abstract class _$$DocumentModelImplCopyWith<$Res>
-    implements $DocumentModelCopyWith<$Res> {
-  factory _$$DocumentModelImplCopyWith(
-          _$DocumentModelImpl value, $Res Function(_$DocumentModelImpl) then) =
-      __$$DocumentModelImplCopyWithImpl<$Res>;
+abstract mixin class _$ListTodoModelCopyWith<$Res>
+    implements $ListTodoModelCopyWith<$Res> {
+  factory _$ListTodoModelCopyWith(
+          _ListTodoModel value, $Res Function(_ListTodoModel) _then) =
+      __$ListTodoModelCopyWithImpl;
   @override
   @useResult
-  $Res call(
-      {String? name,
-      FieldsModel? fields,
-      DateTime? createTime,
-      DateTime? updateTime});
-
-  @override
-  $FieldsModelCopyWith<$Res>? get fields;
+  $Res call({List<DocumentModel>? documents});
 }
 
 /// @nodoc
-class __$$DocumentModelImplCopyWithImpl<$Res>
-    extends _$DocumentModelCopyWithImpl<$Res, _$DocumentModelImpl>
-    implements _$$DocumentModelImplCopyWith<$Res> {
-  __$$DocumentModelImplCopyWithImpl(
-      _$DocumentModelImpl _value, $Res Function(_$DocumentModelImpl) _then)
-      : super(_value, _then);
+class __$ListTodoModelCopyWithImpl<$Res>
+    implements _$ListTodoModelCopyWith<$Res> {
+  __$ListTodoModelCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final _ListTodoModel _self;
+  final $Res Function(_ListTodoModel) _then;
+
+  /// Create a copy of ListTodoModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
-    Object? name = freezed,
-    Object? fields = freezed,
-    Object? createTime = freezed,
-    Object? updateTime = freezed,
+    Object? documents = freezed,
   }) {
-    return _then(_$DocumentModelImpl(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fields: freezed == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as FieldsModel?,
-      createTime: freezed == createTime
-          ? _value.createTime
-          : createTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      updateTime: freezed == updateTime
-          ? _value.updateTime
-          : updateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+    return _then(_ListTodoModel(
+      documents: freezed == documents
+          ? _self._documents
+          : documents // ignore: cast_nullable_to_non_nullable
+              as List<DocumentModel>?,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$DocumentModelImpl implements _DocumentModel {
-  const _$DocumentModelImpl(
-      {this.name, this.fields, this.createTime, this.updateTime});
+mixin _$DocumentModel {
+  String? get name;
+  FieldsModel? get fields;
+  DateTime? get createTime;
+  DateTime? get updateTime;
 
-  factory _$DocumentModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DocumentModelImplFromJson(json);
+  /// Create a copy of DocumentModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $DocumentModelCopyWith<DocumentModel> get copyWith =>
+      _$DocumentModelCopyWithImpl<DocumentModel>(
+          this as DocumentModel, _$identity);
+
+  /// Serializes this DocumentModel to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is DocumentModel &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.fields, fields) || other.fields == fields) &&
+            (identical(other.createTime, createTime) ||
+                other.createTime == createTime) &&
+            (identical(other.updateTime, updateTime) ||
+                other.updateTime == updateTime));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, name, fields, createTime, updateTime);
+
+  @override
+  String toString() {
+    return 'DocumentModel(name: $name, fields: $fields, createTime: $createTime, updateTime: $updateTime)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $DocumentModelCopyWith<$Res> {
+  factory $DocumentModelCopyWith(
+          DocumentModel value, $Res Function(DocumentModel) _then) =
+      _$DocumentModelCopyWithImpl;
+  @useResult
+  $Res call(
+      {String? name,
+      FieldsModel? fields,
+      DateTime? createTime,
+      DateTime? updateTime});
+
+  $FieldsModelCopyWith<$Res>? get fields;
+}
+
+/// @nodoc
+class _$DocumentModelCopyWithImpl<$Res>
+    implements $DocumentModelCopyWith<$Res> {
+  _$DocumentModelCopyWithImpl(this._self, this._then);
+
+  final DocumentModel _self;
+  final $Res Function(DocumentModel) _then;
+
+  /// Create a copy of DocumentModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? fields = freezed,
+    Object? createTime = freezed,
+    Object? updateTime = freezed,
+  }) {
+    return _then(_self.copyWith(
+      name: freezed == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fields: freezed == fields
+          ? _self.fields
+          : fields // ignore: cast_nullable_to_non_nullable
+              as FieldsModel?,
+      createTime: freezed == createTime
+          ? _self.createTime
+          : createTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updateTime: freezed == updateTime
+          ? _self.updateTime
+          : updateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ));
+  }
+
+  /// Create a copy of DocumentModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FieldsModelCopyWith<$Res>? get fields {
+    if (_self.fields == null) {
+      return null;
+    }
+
+    return $FieldsModelCopyWith<$Res>(_self.fields!, (value) {
+      return _then(_self.copyWith(fields: value));
+    });
+  }
+}
+
+/// Adds pattern-matching-related methods to [DocumentModel].
+extension DocumentModelPatterns on DocumentModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_DocumentModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _DocumentModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_DocumentModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DocumentModel():
+        return $default(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_DocumentModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DocumentModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String? name, FieldsModel? fields, DateTime? createTime,
+            DateTime? updateTime)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _DocumentModel() when $default != null:
+        return $default(
+            _that.name, _that.fields, _that.createTime, _that.updateTime);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String? name, FieldsModel? fields, DateTime? createTime,
+            DateTime? updateTime)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DocumentModel():
+        return $default(
+            _that.name, _that.fields, _that.createTime, _that.updateTime);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String? name, FieldsModel? fields, DateTime? createTime,
+            DateTime? updateTime)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DocumentModel() when $default != null:
+        return $default(
+            _that.name, _that.fields, _that.createTime, _that.updateTime);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _DocumentModel implements DocumentModel {
+  const _DocumentModel(
+      {this.name, this.fields, this.createTime, this.updateTime});
+  factory _DocumentModel.fromJson(Map<String, dynamic> json) =>
+      _$DocumentModelFromJson(json);
 
   @override
   final String? name;
@@ -317,16 +609,26 @@ class _$DocumentModelImpl implements _DocumentModel {
   @override
   final DateTime? updateTime;
 
+  /// Create a copy of DocumentModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'DocumentModel(name: $name, fields: $fields, createTime: $createTime, updateTime: $updateTime)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$DocumentModelCopyWith<_DocumentModel> get copyWith =>
+      __$DocumentModelCopyWithImpl<_DocumentModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$DocumentModelToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DocumentModelImpl &&
+            other is _DocumentModel &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.fields, fields) || other.fields == fields) &&
             (identical(other.createTime, createTime) ||
@@ -335,71 +637,133 @@ class _$DocumentModelImpl implements _DocumentModel {
                 other.updateTime == updateTime));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, name, fields, createTime, updateTime);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$DocumentModelImplCopyWith<_$DocumentModelImpl> get copyWith =>
-      __$$DocumentModelImplCopyWithImpl<_$DocumentModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$DocumentModelImplToJson(
-      this,
-    );
+  String toString() {
+    return 'DocumentModel(name: $name, fields: $fields, createTime: $createTime, updateTime: $updateTime)';
   }
 }
 
-abstract class _DocumentModel implements DocumentModel {
-  const factory _DocumentModel(
-      {final String? name,
-      final FieldsModel? fields,
-      final DateTime? createTime,
-      final DateTime? updateTime}) = _$DocumentModelImpl;
+/// @nodoc
+abstract mixin class _$DocumentModelCopyWith<$Res>
+    implements $DocumentModelCopyWith<$Res> {
+  factory _$DocumentModelCopyWith(
+          _DocumentModel value, $Res Function(_DocumentModel) _then) =
+      __$DocumentModelCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {String? name,
+      FieldsModel? fields,
+      DateTime? createTime,
+      DateTime? updateTime});
 
-  factory _DocumentModel.fromJson(Map<String, dynamic> json) =
-      _$DocumentModelImpl.fromJson;
-
   @override
-  String? get name;
-  @override
-  FieldsModel? get fields;
-  @override
-  DateTime? get createTime;
-  @override
-  DateTime? get updateTime;
-  @override
-  @JsonKey(ignore: true)
-  _$$DocumentModelImplCopyWith<_$DocumentModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  $FieldsModelCopyWith<$Res>? get fields;
 }
 
-FieldsModel _$FieldsModelFromJson(Map<String, dynamic> json) {
-  return _FieldsModel.fromJson(json);
+/// @nodoc
+class __$DocumentModelCopyWithImpl<$Res>
+    implements _$DocumentModelCopyWith<$Res> {
+  __$DocumentModelCopyWithImpl(this._self, this._then);
+
+  final _DocumentModel _self;
+  final $Res Function(_DocumentModel) _then;
+
+  /// Create a copy of DocumentModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? name = freezed,
+    Object? fields = freezed,
+    Object? createTime = freezed,
+    Object? updateTime = freezed,
+  }) {
+    return _then(_DocumentModel(
+      name: freezed == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fields: freezed == fields
+          ? _self.fields
+          : fields // ignore: cast_nullable_to_non_nullable
+              as FieldsModel?,
+      createTime: freezed == createTime
+          ? _self.createTime
+          : createTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updateTime: freezed == updateTime
+          ? _self.updateTime
+          : updateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ));
+  }
+
+  /// Create a copy of DocumentModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FieldsModelCopyWith<$Res>? get fields {
+    if (_self.fields == null) {
+      return null;
+    }
+
+    return $FieldsModelCopyWith<$Res>(_self.fields!, (value) {
+      return _then(_self.copyWith(fields: value));
+    });
+  }
 }
 
 /// @nodoc
 mixin _$FieldsModel {
-  DescriptionValueModel? get title => throw _privateConstructorUsedError;
-  DescriptionValueModel? get description => throw _privateConstructorUsedError;
-  IsDoneValueModel? get isDone => throw _privateConstructorUsedError;
-  DueDateValueModel? get dueDate => throw _privateConstructorUsedError;
+  DescriptionValueModel? get title;
+  DescriptionValueModel? get description;
+  IsDoneValueModel? get isDone;
+  DueDateValueModel? get dueDate;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $FieldsModelCopyWith<FieldsModel> get copyWith =>
-      throw _privateConstructorUsedError;
+      _$FieldsModelCopyWithImpl<FieldsModel>(this as FieldsModel, _$identity);
+
+  /// Serializes this FieldsModel to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FieldsModel &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.isDone, isDone) || other.isDone == isDone) &&
+            (identical(other.dueDate, dueDate) || other.dueDate == dueDate));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, title, description, isDone, dueDate);
+
+  @override
+  String toString() {
+    return 'FieldsModel(title: $title, description: $description, isDone: $isDone, dueDate: $dueDate)';
+  }
 }
 
 /// @nodoc
-abstract class $FieldsModelCopyWith<$Res> {
+abstract mixin class $FieldsModelCopyWith<$Res> {
   factory $FieldsModelCopyWith(
-          FieldsModel value, $Res Function(FieldsModel) then) =
-      _$FieldsModelCopyWithImpl<$Res, FieldsModel>;
+          FieldsModel value, $Res Function(FieldsModel) _then) =
+      _$FieldsModelCopyWithImpl;
   @useResult
   $Res call(
       {DescriptionValueModel? title,
@@ -414,15 +778,14 @@ abstract class $FieldsModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FieldsModelCopyWithImpl<$Res, $Val extends FieldsModel>
-    implements $FieldsModelCopyWith<$Res> {
-  _$FieldsModelCopyWithImpl(this._value, this._then);
+class _$FieldsModelCopyWithImpl<$Res> implements $FieldsModelCopyWith<$Res> {
+  _$FieldsModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final FieldsModel _self;
+  final $Res Function(FieldsModel) _then;
 
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -431,144 +794,260 @@ class _$FieldsModelCopyWithImpl<$Res, $Val extends FieldsModel>
     Object? isDone = freezed,
     Object? dueDate = freezed,
   }) {
-    return _then(_value.copyWith(
+    return _then(_self.copyWith(
       title: freezed == title
-          ? _value.title
+          ? _self.title
           : title // ignore: cast_nullable_to_non_nullable
               as DescriptionValueModel?,
       description: freezed == description
-          ? _value.description
+          ? _self.description
           : description // ignore: cast_nullable_to_non_nullable
               as DescriptionValueModel?,
       isDone: freezed == isDone
-          ? _value.isDone
+          ? _self.isDone
           : isDone // ignore: cast_nullable_to_non_nullable
               as IsDoneValueModel?,
       dueDate: freezed == dueDate
-          ? _value.dueDate
-          : dueDate // ignore: cast_nullable_to_non_nullable
-              as DueDateValueModel?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DescriptionValueModelCopyWith<$Res>? get title {
-    if (_value.title == null) {
-      return null;
-    }
-
-    return $DescriptionValueModelCopyWith<$Res>(_value.title!, (value) {
-      return _then(_value.copyWith(title: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DescriptionValueModelCopyWith<$Res>? get description {
-    if (_value.description == null) {
-      return null;
-    }
-
-    return $DescriptionValueModelCopyWith<$Res>(_value.description!, (value) {
-      return _then(_value.copyWith(description: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $IsDoneValueModelCopyWith<$Res>? get isDone {
-    if (_value.isDone == null) {
-      return null;
-    }
-
-    return $IsDoneValueModelCopyWith<$Res>(_value.isDone!, (value) {
-      return _then(_value.copyWith(isDone: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DueDateValueModelCopyWith<$Res>? get dueDate {
-    if (_value.dueDate == null) {
-      return null;
-    }
-
-    return $DueDateValueModelCopyWith<$Res>(_value.dueDate!, (value) {
-      return _then(_value.copyWith(dueDate: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$FieldsModelImplCopyWith<$Res>
-    implements $FieldsModelCopyWith<$Res> {
-  factory _$$FieldsModelImplCopyWith(
-          _$FieldsModelImpl value, $Res Function(_$FieldsModelImpl) then) =
-      __$$FieldsModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {DescriptionValueModel? title,
-      DescriptionValueModel? description,
-      IsDoneValueModel? isDone,
-      DueDateValueModel? dueDate});
-
-  @override
-  $DescriptionValueModelCopyWith<$Res>? get title;
-  @override
-  $DescriptionValueModelCopyWith<$Res>? get description;
-  @override
-  $IsDoneValueModelCopyWith<$Res>? get isDone;
-  @override
-  $DueDateValueModelCopyWith<$Res>? get dueDate;
-}
-
-/// @nodoc
-class __$$FieldsModelImplCopyWithImpl<$Res>
-    extends _$FieldsModelCopyWithImpl<$Res, _$FieldsModelImpl>
-    implements _$$FieldsModelImplCopyWith<$Res> {
-  __$$FieldsModelImplCopyWithImpl(
-      _$FieldsModelImpl _value, $Res Function(_$FieldsModelImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? title = freezed,
-    Object? description = freezed,
-    Object? isDone = freezed,
-    Object? dueDate = freezed,
-  }) {
-    return _then(_$FieldsModelImpl(
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as DescriptionValueModel?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as DescriptionValueModel?,
-      isDone: freezed == isDone
-          ? _value.isDone
-          : isDone // ignore: cast_nullable_to_non_nullable
-              as IsDoneValueModel?,
-      dueDate: freezed == dueDate
-          ? _value.dueDate
+          ? _self.dueDate
           : dueDate // ignore: cast_nullable_to_non_nullable
               as DueDateValueModel?,
     ));
+  }
+
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $DescriptionValueModelCopyWith<$Res>? get title {
+    if (_self.title == null) {
+      return null;
+    }
+
+    return $DescriptionValueModelCopyWith<$Res>(_self.title!, (value) {
+      return _then(_self.copyWith(title: value));
+    });
+  }
+
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $DescriptionValueModelCopyWith<$Res>? get description {
+    if (_self.description == null) {
+      return null;
+    }
+
+    return $DescriptionValueModelCopyWith<$Res>(_self.description!, (value) {
+      return _then(_self.copyWith(description: value));
+    });
+  }
+
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $IsDoneValueModelCopyWith<$Res>? get isDone {
+    if (_self.isDone == null) {
+      return null;
+    }
+
+    return $IsDoneValueModelCopyWith<$Res>(_self.isDone!, (value) {
+      return _then(_self.copyWith(isDone: value));
+    });
+  }
+
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $DueDateValueModelCopyWith<$Res>? get dueDate {
+    if (_self.dueDate == null) {
+      return null;
+    }
+
+    return $DueDateValueModelCopyWith<$Res>(_self.dueDate!, (value) {
+      return _then(_self.copyWith(dueDate: value));
+    });
+  }
+}
+
+/// Adds pattern-matching-related methods to [FieldsModel].
+extension FieldsModelPatterns on FieldsModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_FieldsModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _FieldsModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_FieldsModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _FieldsModel():
+        return $default(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_FieldsModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _FieldsModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            DescriptionValueModel? title,
+            DescriptionValueModel? description,
+            IsDoneValueModel? isDone,
+            DueDateValueModel? dueDate)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _FieldsModel() when $default != null:
+        return $default(
+            _that.title, _that.description, _that.isDone, _that.dueDate);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            DescriptionValueModel? title,
+            DescriptionValueModel? description,
+            IsDoneValueModel? isDone,
+            DueDateValueModel? dueDate)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _FieldsModel():
+        return $default(
+            _that.title, _that.description, _that.isDone, _that.dueDate);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            DescriptionValueModel? title,
+            DescriptionValueModel? description,
+            IsDoneValueModel? isDone,
+            DueDateValueModel? dueDate)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _FieldsModel() when $default != null:
+        return $default(
+            _that.title, _that.description, _that.isDone, _that.dueDate);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$FieldsModelImpl implements _FieldsModel {
-  const _$FieldsModelImpl(
-      {this.title, this.description, this.isDone, this.dueDate});
-
-  factory _$FieldsModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FieldsModelImplFromJson(json);
+class _FieldsModel implements FieldsModel {
+  const _FieldsModel({this.title, this.description, this.isDone, this.dueDate});
+  factory _FieldsModel.fromJson(Map<String, dynamic> json) =>
+      _$FieldsModelFromJson(json);
 
   @override
   final DescriptionValueModel? title;
@@ -579,16 +1058,26 @@ class _$FieldsModelImpl implements _FieldsModel {
   @override
   final DueDateValueModel? dueDate;
 
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'FieldsModel(title: $title, description: $description, isDone: $isDone, dueDate: $dueDate)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FieldsModelCopyWith<_FieldsModel> get copyWith =>
+      __$FieldsModelCopyWithImpl<_FieldsModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FieldsModelToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FieldsModelImpl &&
+            other is _FieldsModel &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -596,471 +1085,1036 @@ class _$FieldsModelImpl implements _FieldsModel {
             (identical(other.dueDate, dueDate) || other.dueDate == dueDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, title, description, isDone, dueDate);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$FieldsModelImplCopyWith<_$FieldsModelImpl> get copyWith =>
-      __$$FieldsModelImplCopyWithImpl<_$FieldsModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$FieldsModelImplToJson(
-      this,
-    );
+  String toString() {
+    return 'FieldsModel(title: $title, description: $description, isDone: $isDone, dueDate: $dueDate)';
   }
 }
 
-abstract class _FieldsModel implements FieldsModel {
-  const factory _FieldsModel(
-      {final DescriptionValueModel? title,
-      final DescriptionValueModel? description,
-      final IsDoneValueModel? isDone,
-      final DueDateValueModel? dueDate}) = _$FieldsModelImpl;
+/// @nodoc
+abstract mixin class _$FieldsModelCopyWith<$Res>
+    implements $FieldsModelCopyWith<$Res> {
+  factory _$FieldsModelCopyWith(
+          _FieldsModel value, $Res Function(_FieldsModel) _then) =
+      __$FieldsModelCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {DescriptionValueModel? title,
+      DescriptionValueModel? description,
+      IsDoneValueModel? isDone,
+      DueDateValueModel? dueDate});
 
-  factory _FieldsModel.fromJson(Map<String, dynamic> json) =
-      _$FieldsModelImpl.fromJson;
-
   @override
-  DescriptionValueModel? get title;
+  $DescriptionValueModelCopyWith<$Res>? get title;
   @override
-  DescriptionValueModel? get description;
+  $DescriptionValueModelCopyWith<$Res>? get description;
   @override
-  IsDoneValueModel? get isDone;
+  $IsDoneValueModelCopyWith<$Res>? get isDone;
   @override
-  DueDateValueModel? get dueDate;
-  @override
-  @JsonKey(ignore: true)
-  _$$FieldsModelImplCopyWith<_$FieldsModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  $DueDateValueModelCopyWith<$Res>? get dueDate;
 }
 
-DueDateValueModel _$DueDateValueModelFromJson(Map<String, dynamic> json) {
-  return _DueDateValueModel.fromJson(json);
+/// @nodoc
+class __$FieldsModelCopyWithImpl<$Res> implements _$FieldsModelCopyWith<$Res> {
+  __$FieldsModelCopyWithImpl(this._self, this._then);
+
+  final _FieldsModel _self;
+  final $Res Function(_FieldsModel) _then;
+
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? isDone = freezed,
+    Object? dueDate = freezed,
+  }) {
+    return _then(_FieldsModel(
+      title: freezed == title
+          ? _self.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as DescriptionValueModel?,
+      description: freezed == description
+          ? _self.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as DescriptionValueModel?,
+      isDone: freezed == isDone
+          ? _self.isDone
+          : isDone // ignore: cast_nullable_to_non_nullable
+              as IsDoneValueModel?,
+      dueDate: freezed == dueDate
+          ? _self.dueDate
+          : dueDate // ignore: cast_nullable_to_non_nullable
+              as DueDateValueModel?,
+    ));
+  }
+
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $DescriptionValueModelCopyWith<$Res>? get title {
+    if (_self.title == null) {
+      return null;
+    }
+
+    return $DescriptionValueModelCopyWith<$Res>(_self.title!, (value) {
+      return _then(_self.copyWith(title: value));
+    });
+  }
+
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $DescriptionValueModelCopyWith<$Res>? get description {
+    if (_self.description == null) {
+      return null;
+    }
+
+    return $DescriptionValueModelCopyWith<$Res>(_self.description!, (value) {
+      return _then(_self.copyWith(description: value));
+    });
+  }
+
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $IsDoneValueModelCopyWith<$Res>? get isDone {
+    if (_self.isDone == null) {
+      return null;
+    }
+
+    return $IsDoneValueModelCopyWith<$Res>(_self.isDone!, (value) {
+      return _then(_self.copyWith(isDone: value));
+    });
+  }
+
+  /// Create a copy of FieldsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $DueDateValueModelCopyWith<$Res>? get dueDate {
+    if (_self.dueDate == null) {
+      return null;
+    }
+
+    return $DueDateValueModelCopyWith<$Res>(_self.dueDate!, (value) {
+      return _then(_self.copyWith(dueDate: value));
+    });
+  }
 }
 
 /// @nodoc
 mixin _$DueDateValueModel {
   @FirestoreDateTimeConverter()
-  DateTime? get timestampValue => throw _privateConstructorUsedError;
+  DateTime? get timestampValue;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  /// Create a copy of DueDateValueModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $DueDateValueModelCopyWith<DueDateValueModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+      _$DueDateValueModelCopyWithImpl<DueDateValueModel>(
+          this as DueDateValueModel, _$identity);
 
-/// @nodoc
-abstract class $DueDateValueModelCopyWith<$Res> {
-  factory $DueDateValueModelCopyWith(
-          DueDateValueModel value, $Res Function(DueDateValueModel) then) =
-      _$DueDateValueModelCopyWithImpl<$Res, DueDateValueModel>;
-  @useResult
-  $Res call({@FirestoreDateTimeConverter() DateTime? timestampValue});
-}
+  /// Serializes this DueDateValueModel to a JSON map.
+  Map<String, dynamic> toJson();
 
-/// @nodoc
-class _$DueDateValueModelCopyWithImpl<$Res, $Val extends DueDateValueModel>
-    implements $DueDateValueModelCopyWith<$Res> {
-  _$DueDateValueModelCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? timestampValue = freezed,
-  }) {
-    return _then(_value.copyWith(
-      timestampValue: freezed == timestampValue
-          ? _value.timestampValue
-          : timestampValue // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is DueDateValueModel &&
+            (identical(other.timestampValue, timestampValue) ||
+                other.timestampValue == timestampValue));
   }
-}
 
-/// @nodoc
-abstract class _$$DueDateValueModelImplCopyWith<$Res>
-    implements $DueDateValueModelCopyWith<$Res> {
-  factory _$$DueDateValueModelImplCopyWith(_$DueDateValueModelImpl value,
-          $Res Function(_$DueDateValueModelImpl) then) =
-      __$$DueDateValueModelImplCopyWithImpl<$Res>;
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @useResult
-  $Res call({@FirestoreDateTimeConverter() DateTime? timestampValue});
-}
-
-/// @nodoc
-class __$$DueDateValueModelImplCopyWithImpl<$Res>
-    extends _$DueDateValueModelCopyWithImpl<$Res, _$DueDateValueModelImpl>
-    implements _$$DueDateValueModelImplCopyWith<$Res> {
-  __$$DueDateValueModelImplCopyWithImpl(_$DueDateValueModelImpl _value,
-      $Res Function(_$DueDateValueModelImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? timestampValue = freezed,
-  }) {
-    return _then(_$DueDateValueModelImpl(
-      timestampValue: freezed == timestampValue
-          ? _value.timestampValue
-          : timestampValue // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$DueDateValueModelImpl implements _DueDateValueModel {
-  const _$DueDateValueModelImpl(
-      {@FirestoreDateTimeConverter() this.timestampValue});
-
-  factory _$DueDateValueModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DueDateValueModelImplFromJson(json);
-
-  @override
-  @FirestoreDateTimeConverter()
-  final DateTime? timestampValue;
+  int get hashCode => Object.hash(runtimeType, timestampValue);
 
   @override
   String toString() {
     return 'DueDateValueModel(timestampValue: $timestampValue)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DueDateValueModelImpl &&
-            (identical(other.timestampValue, timestampValue) ||
-                other.timestampValue == timestampValue));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, timestampValue);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DueDateValueModelImplCopyWith<_$DueDateValueModelImpl> get copyWith =>
-      __$$DueDateValueModelImplCopyWithImpl<_$DueDateValueModelImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$DueDateValueModelImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _DueDateValueModel implements DueDateValueModel {
-  const factory _DueDateValueModel(
-          {@FirestoreDateTimeConverter() final DateTime? timestampValue}) =
-      _$DueDateValueModelImpl;
-
-  factory _DueDateValueModel.fromJson(Map<String, dynamic> json) =
-      _$DueDateValueModelImpl.fromJson;
-
-  @override
-  @FirestoreDateTimeConverter()
-  DateTime? get timestampValue;
-  @override
-  @JsonKey(ignore: true)
-  _$$DueDateValueModelImplCopyWith<_$DueDateValueModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-DescriptionValueModel _$DescriptionValueModelFromJson(
-    Map<String, dynamic> json) {
-  return _DescriptionValueModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$DescriptionValueModel {
-  String? get stringValue => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $DescriptionValueModelCopyWith<DescriptionValueModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $DescriptionValueModelCopyWith<$Res> {
-  factory $DescriptionValueModelCopyWith(DescriptionValueModel value,
-          $Res Function(DescriptionValueModel) then) =
-      _$DescriptionValueModelCopyWithImpl<$Res, DescriptionValueModel>;
+abstract mixin class $DueDateValueModelCopyWith<$Res> {
+  factory $DueDateValueModelCopyWith(
+          DueDateValueModel value, $Res Function(DueDateValueModel) _then) =
+      _$DueDateValueModelCopyWithImpl;
   @useResult
-  $Res call({String? stringValue});
+  $Res call({@FirestoreDateTimeConverter() DateTime? timestampValue});
 }
 
 /// @nodoc
-class _$DescriptionValueModelCopyWithImpl<$Res,
-        $Val extends DescriptionValueModel>
-    implements $DescriptionValueModelCopyWith<$Res> {
-  _$DescriptionValueModelCopyWithImpl(this._value, this._then);
+class _$DueDateValueModelCopyWithImpl<$Res>
+    implements $DueDateValueModelCopyWith<$Res> {
+  _$DueDateValueModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final DueDateValueModel _self;
+  final $Res Function(DueDateValueModel) _then;
 
+  /// Create a copy of DueDateValueModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? stringValue = freezed,
+    Object? timestampValue = freezed,
   }) {
-    return _then(_value.copyWith(
-      stringValue: freezed == stringValue
-          ? _value.stringValue
-          : stringValue // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$DescriptionValueModelImplCopyWith<$Res>
-    implements $DescriptionValueModelCopyWith<$Res> {
-  factory _$$DescriptionValueModelImplCopyWith(
-          _$DescriptionValueModelImpl value,
-          $Res Function(_$DescriptionValueModelImpl) then) =
-      __$$DescriptionValueModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? stringValue});
-}
-
-/// @nodoc
-class __$$DescriptionValueModelImplCopyWithImpl<$Res>
-    extends _$DescriptionValueModelCopyWithImpl<$Res,
-        _$DescriptionValueModelImpl>
-    implements _$$DescriptionValueModelImplCopyWith<$Res> {
-  __$$DescriptionValueModelImplCopyWithImpl(_$DescriptionValueModelImpl _value,
-      $Res Function(_$DescriptionValueModelImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? stringValue = freezed,
-  }) {
-    return _then(_$DescriptionValueModelImpl(
-      stringValue: freezed == stringValue
-          ? _value.stringValue
-          : stringValue // ignore: cast_nullable_to_non_nullable
-              as String?,
+    return _then(_self.copyWith(
+      timestampValue: freezed == timestampValue
+          ? _self.timestampValue
+          : timestampValue // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [DueDateValueModel].
+extension DueDateValueModelPatterns on DueDateValueModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_DueDateValueModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _DueDateValueModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_DueDateValueModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DueDateValueModel():
+        return $default(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_DueDateValueModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DueDateValueModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(@FirestoreDateTimeConverter() DateTime? timestampValue)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _DueDateValueModel() when $default != null:
+        return $default(_that.timestampValue);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(@FirestoreDateTimeConverter() DateTime? timestampValue)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DueDateValueModel():
+        return $default(_that.timestampValue);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(@FirestoreDateTimeConverter() DateTime? timestampValue)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DueDateValueModel() when $default != null:
+        return $default(_that.timestampValue);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$DescriptionValueModelImpl implements _DescriptionValueModel {
-  const _$DescriptionValueModelImpl({this.stringValue});
-
-  factory _$DescriptionValueModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DescriptionValueModelImplFromJson(json);
+class _DueDateValueModel implements DueDateValueModel {
+  const _DueDateValueModel({@FirestoreDateTimeConverter() this.timestampValue});
+  factory _DueDateValueModel.fromJson(Map<String, dynamic> json) =>
+      _$DueDateValueModelFromJson(json);
 
   @override
-  final String? stringValue;
+  @FirestoreDateTimeConverter()
+  final DateTime? timestampValue;
+
+  /// Create a copy of DueDateValueModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$DueDateValueModelCopyWith<_DueDateValueModel> get copyWith =>
+      __$DueDateValueModelCopyWithImpl<_DueDateValueModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$DueDateValueModelToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DueDateValueModel &&
+            (identical(other.timestampValue, timestampValue) ||
+                other.timestampValue == timestampValue));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, timestampValue);
+
+  @override
+  String toString() {
+    return 'DueDateValueModel(timestampValue: $timestampValue)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$DueDateValueModelCopyWith<$Res>
+    implements $DueDateValueModelCopyWith<$Res> {
+  factory _$DueDateValueModelCopyWith(
+          _DueDateValueModel value, $Res Function(_DueDateValueModel) _then) =
+      __$DueDateValueModelCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@FirestoreDateTimeConverter() DateTime? timestampValue});
+}
+
+/// @nodoc
+class __$DueDateValueModelCopyWithImpl<$Res>
+    implements _$DueDateValueModelCopyWith<$Res> {
+  __$DueDateValueModelCopyWithImpl(this._self, this._then);
+
+  final _DueDateValueModel _self;
+  final $Res Function(_DueDateValueModel) _then;
+
+  /// Create a copy of DueDateValueModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? timestampValue = freezed,
+  }) {
+    return _then(_DueDateValueModel(
+      timestampValue: freezed == timestampValue
+          ? _self.timestampValue
+          : timestampValue // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$DescriptionValueModel {
+  String? get stringValue;
+
+  /// Create a copy of DescriptionValueModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $DescriptionValueModelCopyWith<DescriptionValueModel> get copyWith =>
+      _$DescriptionValueModelCopyWithImpl<DescriptionValueModel>(
+          this as DescriptionValueModel, _$identity);
+
+  /// Serializes this DescriptionValueModel to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is DescriptionValueModel &&
+            (identical(other.stringValue, stringValue) ||
+                other.stringValue == stringValue));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, stringValue);
 
   @override
   String toString() {
     return 'DescriptionValueModel(stringValue: $stringValue)';
   }
+}
+
+/// @nodoc
+abstract mixin class $DescriptionValueModelCopyWith<$Res> {
+  factory $DescriptionValueModelCopyWith(DescriptionValueModel value,
+          $Res Function(DescriptionValueModel) _then) =
+      _$DescriptionValueModelCopyWithImpl;
+  @useResult
+  $Res call({String? stringValue});
+}
+
+/// @nodoc
+class _$DescriptionValueModelCopyWithImpl<$Res>
+    implements $DescriptionValueModelCopyWith<$Res> {
+  _$DescriptionValueModelCopyWithImpl(this._self, this._then);
+
+  final DescriptionValueModel _self;
+  final $Res Function(DescriptionValueModel) _then;
+
+  /// Create a copy of DescriptionValueModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? stringValue = freezed,
+  }) {
+    return _then(_self.copyWith(
+      stringValue: freezed == stringValue
+          ? _self.stringValue
+          : stringValue // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [DescriptionValueModel].
+extension DescriptionValueModelPatterns on DescriptionValueModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_DescriptionValueModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _DescriptionValueModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_DescriptionValueModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DescriptionValueModel():
+        return $default(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_DescriptionValueModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DescriptionValueModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String? stringValue)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _DescriptionValueModel() when $default != null:
+        return $default(_that.stringValue);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String? stringValue) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DescriptionValueModel():
+        return $default(_that.stringValue);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String? stringValue)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DescriptionValueModel() when $default != null:
+        return $default(_that.stringValue);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _DescriptionValueModel implements DescriptionValueModel {
+  const _DescriptionValueModel({this.stringValue});
+  factory _DescriptionValueModel.fromJson(Map<String, dynamic> json) =>
+      _$DescriptionValueModelFromJson(json);
+
+  @override
+  final String? stringValue;
+
+  /// Create a copy of DescriptionValueModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$DescriptionValueModelCopyWith<_DescriptionValueModel> get copyWith =>
+      __$DescriptionValueModelCopyWithImpl<_DescriptionValueModel>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$DescriptionValueModelToJson(
+      this,
+    );
+  }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DescriptionValueModelImpl &&
+            other is _DescriptionValueModel &&
             (identical(other.stringValue, stringValue) ||
                 other.stringValue == stringValue));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, stringValue);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$DescriptionValueModelImplCopyWith<_$DescriptionValueModelImpl>
-      get copyWith => __$$DescriptionValueModelImplCopyWithImpl<
-          _$DescriptionValueModelImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$DescriptionValueModelImplToJson(
-      this,
-    );
+  String toString() {
+    return 'DescriptionValueModel(stringValue: $stringValue)';
   }
 }
 
-abstract class _DescriptionValueModel implements DescriptionValueModel {
-  const factory _DescriptionValueModel({final String? stringValue}) =
-      _$DescriptionValueModelImpl;
-
-  factory _DescriptionValueModel.fromJson(Map<String, dynamic> json) =
-      _$DescriptionValueModelImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$DescriptionValueModelCopyWith<$Res>
+    implements $DescriptionValueModelCopyWith<$Res> {
+  factory _$DescriptionValueModelCopyWith(_DescriptionValueModel value,
+          $Res Function(_DescriptionValueModel) _then) =
+      __$DescriptionValueModelCopyWithImpl;
   @override
-  String? get stringValue;
-  @override
-  @JsonKey(ignore: true)
-  _$$DescriptionValueModelImplCopyWith<_$DescriptionValueModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  @useResult
+  $Res call({String? stringValue});
 }
 
-IsDoneValueModel _$IsDoneValueModelFromJson(Map<String, dynamic> json) {
-  return _IsDoneValueModel.fromJson(json);
+/// @nodoc
+class __$DescriptionValueModelCopyWithImpl<$Res>
+    implements _$DescriptionValueModelCopyWith<$Res> {
+  __$DescriptionValueModelCopyWithImpl(this._self, this._then);
+
+  final _DescriptionValueModel _self;
+  final $Res Function(_DescriptionValueModel) _then;
+
+  /// Create a copy of DescriptionValueModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? stringValue = freezed,
+  }) {
+    return _then(_DescriptionValueModel(
+      stringValue: freezed == stringValue
+          ? _self.stringValue
+          : stringValue // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
 }
 
 /// @nodoc
 mixin _$IsDoneValueModel {
-  bool? get booleanValue => throw _privateConstructorUsedError;
+  bool? get booleanValue;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $IsDoneValueModelCopyWith<IsDoneValueModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $IsDoneValueModelCopyWith<$Res> {
-  factory $IsDoneValueModelCopyWith(
-          IsDoneValueModel value, $Res Function(IsDoneValueModel) then) =
-      _$IsDoneValueModelCopyWithImpl<$Res, IsDoneValueModel>;
-  @useResult
-  $Res call({bool? booleanValue});
-}
-
-/// @nodoc
-class _$IsDoneValueModelCopyWithImpl<$Res, $Val extends IsDoneValueModel>
-    implements $IsDoneValueModelCopyWith<$Res> {
-  _$IsDoneValueModelCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of IsDoneValueModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $IsDoneValueModelCopyWith<IsDoneValueModel> get copyWith =>
+      _$IsDoneValueModelCopyWithImpl<IsDoneValueModel>(
+          this as IsDoneValueModel, _$identity);
+
+  /// Serializes this IsDoneValueModel to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? booleanValue = freezed,
-  }) {
-    return _then(_value.copyWith(
-      booleanValue: freezed == booleanValue
-          ? _value.booleanValue
-          : booleanValue // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is IsDoneValueModel &&
+            (identical(other.booleanValue, booleanValue) ||
+                other.booleanValue == booleanValue));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, booleanValue);
+
+  @override
+  String toString() {
+    return 'IsDoneValueModel(booleanValue: $booleanValue)';
   }
 }
 
 /// @nodoc
-abstract class _$$IsDoneValueModelImplCopyWith<$Res>
-    implements $IsDoneValueModelCopyWith<$Res> {
-  factory _$$IsDoneValueModelImplCopyWith(_$IsDoneValueModelImpl value,
-          $Res Function(_$IsDoneValueModelImpl) then) =
-      __$$IsDoneValueModelImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $IsDoneValueModelCopyWith<$Res> {
+  factory $IsDoneValueModelCopyWith(
+          IsDoneValueModel value, $Res Function(IsDoneValueModel) _then) =
+      _$IsDoneValueModelCopyWithImpl;
   @useResult
   $Res call({bool? booleanValue});
 }
 
 /// @nodoc
-class __$$IsDoneValueModelImplCopyWithImpl<$Res>
-    extends _$IsDoneValueModelCopyWithImpl<$Res, _$IsDoneValueModelImpl>
-    implements _$$IsDoneValueModelImplCopyWith<$Res> {
-  __$$IsDoneValueModelImplCopyWithImpl(_$IsDoneValueModelImpl _value,
-      $Res Function(_$IsDoneValueModelImpl) _then)
-      : super(_value, _then);
+class _$IsDoneValueModelCopyWithImpl<$Res>
+    implements $IsDoneValueModelCopyWith<$Res> {
+  _$IsDoneValueModelCopyWithImpl(this._self, this._then);
 
+  final IsDoneValueModel _self;
+  final $Res Function(IsDoneValueModel) _then;
+
+  /// Create a copy of IsDoneValueModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? booleanValue = freezed,
   }) {
-    return _then(_$IsDoneValueModelImpl(
+    return _then(_self.copyWith(
       booleanValue: freezed == booleanValue
-          ? _value.booleanValue
+          ? _self.booleanValue
           : booleanValue // ignore: cast_nullable_to_non_nullable
               as bool?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [IsDoneValueModel].
+extension IsDoneValueModelPatterns on IsDoneValueModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_IsDoneValueModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _IsDoneValueModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_IsDoneValueModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IsDoneValueModel():
+        return $default(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_IsDoneValueModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IsDoneValueModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(bool? booleanValue)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _IsDoneValueModel() when $default != null:
+        return $default(_that.booleanValue);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(bool? booleanValue) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IsDoneValueModel():
+        return $default(_that.booleanValue);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(bool? booleanValue)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _IsDoneValueModel() when $default != null:
+        return $default(_that.booleanValue);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$IsDoneValueModelImpl implements _IsDoneValueModel {
-  const _$IsDoneValueModelImpl({this.booleanValue});
-
-  factory _$IsDoneValueModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$IsDoneValueModelImplFromJson(json);
+class _IsDoneValueModel implements IsDoneValueModel {
+  const _IsDoneValueModel({this.booleanValue});
+  factory _IsDoneValueModel.fromJson(Map<String, dynamic> json) =>
+      _$IsDoneValueModelFromJson(json);
 
   @override
   final bool? booleanValue;
 
+  /// Create a copy of IsDoneValueModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'IsDoneValueModel(booleanValue: $booleanValue)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$IsDoneValueModelCopyWith<_IsDoneValueModel> get copyWith =>
+      __$IsDoneValueModelCopyWithImpl<_IsDoneValueModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$IsDoneValueModelToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IsDoneValueModelImpl &&
+            other is _IsDoneValueModel &&
             (identical(other.booleanValue, booleanValue) ||
                 other.booleanValue == booleanValue));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, booleanValue);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$IsDoneValueModelImplCopyWith<_$IsDoneValueModelImpl> get copyWith =>
-      __$$IsDoneValueModelImplCopyWithImpl<_$IsDoneValueModelImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$IsDoneValueModelImplToJson(
-      this,
-    );
+  String toString() {
+    return 'IsDoneValueModel(booleanValue: $booleanValue)';
   }
 }
 
-abstract class _IsDoneValueModel implements IsDoneValueModel {
-  const factory _IsDoneValueModel({final bool? booleanValue}) =
-      _$IsDoneValueModelImpl;
-
-  factory _IsDoneValueModel.fromJson(Map<String, dynamic> json) =
-      _$IsDoneValueModelImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$IsDoneValueModelCopyWith<$Res>
+    implements $IsDoneValueModelCopyWith<$Res> {
+  factory _$IsDoneValueModelCopyWith(
+          _IsDoneValueModel value, $Res Function(_IsDoneValueModel) _then) =
+      __$IsDoneValueModelCopyWithImpl;
   @override
-  bool? get booleanValue;
-  @override
-  @JsonKey(ignore: true)
-  _$$IsDoneValueModelImplCopyWith<_$IsDoneValueModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call({bool? booleanValue});
 }
+
+/// @nodoc
+class __$IsDoneValueModelCopyWithImpl<$Res>
+    implements _$IsDoneValueModelCopyWith<$Res> {
+  __$IsDoneValueModelCopyWithImpl(this._self, this._then);
+
+  final _IsDoneValueModel _self;
+  final $Res Function(_IsDoneValueModel) _then;
+
+  /// Create a copy of IsDoneValueModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? booleanValue = freezed,
+  }) {
+    return _then(_IsDoneValueModel(
+      booleanValue: freezed == booleanValue
+          ? _self.booleanValue
+          : booleanValue // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
+}
+
+// dart format on

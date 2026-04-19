@@ -6,14 +6,12 @@ part of 'delete_account_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DeleteAccountModelImpl _$$DeleteAccountModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$DeleteAccountModelImpl(
+_DeleteAccountModel _$DeleteAccountModelFromJson(Map<String, dynamic> json) =>
+    _DeleteAccountModel(
       kind: json['kind'] as String?,
     );
 
-Map<String, dynamic> _$$DeleteAccountModelImplToJson(
-        _$DeleteAccountModelImpl instance) =>
+Map<String, dynamic> _$DeleteAccountModelToJson(_DeleteAccountModel instance) =>
     <String, dynamic>{
       'kind': instance.kind,
     };

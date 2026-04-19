@@ -7,7 +7,7 @@ import 'package:fire_todo/shared/local_db/domain/models/profile_hive.dart';
 import 'package:fire_todo/shared/models/models.dart';
 import 'package:fire_todo/shared/storage/domain/i_storage_token_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:mocktail/mocktail.dart';
 
 enum CallType { success, failed }

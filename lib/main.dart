@@ -2,7 +2,7 @@ import 'package:fk_user_agent/fk_user_agent.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
