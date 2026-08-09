@@ -43,5 +43,5 @@ app.*.map.json
 /android/app/release
 
 # Android signing
-android/app/fire_todo.jks
+android/fire_todo.jks
 android/key.properties

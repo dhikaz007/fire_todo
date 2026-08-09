@@ -49,11 +49,11 @@ jobs:
         run: flutter pub get
 
       - name: Decode keystore
-        run: echo "${{ secrets.FIRE_TODO_KEYSTORE_BASE64 }}" | base64 -d > android/app/fire_todo.jks
+        run: echo "${{ secrets.FIRE_TODO_KEYSTORE_BASE64 }}" | base64 -d > android/fire_todo.jks
 
       - name: Write key.properties
         run: |
-          printf "storePassword=%s\nstoreFile=fire_todo.jks\nkeyAlias=%s\nkeyPassword=%s\n" \
+          printf "storePassword=%s\nstoreFile=../fire_todo.jks\nkeyAlias=%s\nkeyPassword=%s\n" \
             "${{ secrets.FIRE_TODO_STORE_PASSWORD }}" \
             "${{ secrets.FIRE_TODO_KEY_ALIAS }}" \
             "${{ secrets.FIRE_TODO_KEY_PASSWORD }}" > android/key.properties
