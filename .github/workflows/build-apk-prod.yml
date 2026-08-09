@@ -48,6 +48,16 @@ jobs:
       - name: Pub get
         run: flutter pub get
 
+      - name: Decode keystore
+        run: echo "${{ secrets.FIRE_TODO_KEYSTORE_BASE64 }}" | base64 -d > android/app/fire_todo.jks
+
+      - name: Write key.properties
+        run: |
+          printf "storePassword=%s\nstoreFile=fire_todo.jks\nkeyAlias=%s\nkeyPassword=%s\n" \
+            "${{ secrets.FIRE_TODO_STORE_PASSWORD }}" \
+            "${{ secrets.FIRE_TODO_KEY_ALIAS }}" \
+            "${{ secrets.FIRE_TODO_KEY_PASSWORD }}" > android/key.properties
+
       - name: Build prod release APK
         run: flutter build apk --release --flavor prod --dart-define=FLAVOR=prod --no-tree-shake-icons --android-skip-build-dependency-validation
 
