@@ -23,7 +23,7 @@ jobs:
           flutter-version: "3.44.5"
 
       - name: Accept Android SDK licenses
-        run: yes | sdkmanager --licenses >/dev/null
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null
 
       - name: Pub get
         run: flutter pub get
