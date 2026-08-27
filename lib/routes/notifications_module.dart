@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../feature/notifications/presentations/screens/screens.dart';
+import '../feature/notifications/presentation/screens/screens.dart';
 
 class NotificationsModule extends Module {
   @override
