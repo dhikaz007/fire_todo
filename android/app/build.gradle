@@ -32,16 +32,20 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.example.fire_todo"
-    compileSdk = flutter.compileSdkVersion    
+    compileSdk = flutter.compileSdkVersion
+    // Pakai build-tools terbaru yang sudah terinstall (AGP 8.11 min=35.0.0)
+    buildToolsVersion = "36.1.0"
+    // NDK 28.2 wajib dipakai karena integration_test & jni plugin membutuhkan
     ndkVersion "28.2.13676358"
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        // Java 17 supaya sinkron dengan root build.gradle
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
+        jvmTarget = JavaVersion.VERSION_17
     }
 
     defaultConfig {
@@ -85,11 +89,26 @@ android {
     }
 
     buildTypes {
+        debug {
+            // Optimasi debug build: minify & shrink OFF, crunch PNG OFF
+            crunchPngs false
+            minifyEnabled false
+        }
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = keystorePropertiesFile.exists() ? signingConfigs.release : signingConfigs.debug
+            crunchPngs false
         }
+    }
+
+    lint {
+        // Skip lint saat dev build -> lebih cepat
+        abortOnError false
+        checkReleaseBuilds false
+        htmlReport false
+        xmlReport false
+        textReport false
     }
 
     configurations.all {

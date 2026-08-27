@@ -6,17 +6,12 @@ allprojects {
 }
 
 rootProject.buildDir = "../build"
-// subprojects {
-//     project.buildDir = "${rootProject.buildDir}/${project.name}"
-// }
-// subprojects {
-//     project.evaluationDependsOn(":app")
-// }
 
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 
     afterEvaluate { subproject ->
+        // ── Java 17 untuk semua Android module ──────────────────────
         if (subproject.plugins.hasPlugin("com.android.application") ||
             subproject.plugins.hasPlugin("com.android.library")) {
 
@@ -27,6 +22,7 @@ subprojects {
                     targetCompatibility JavaVersion.VERSION_17
                 }
 
+                // Patch namespace untuk plugin lama yang belum support namespace
                 if (!androidExt.hasProperty("namespace") || androidExt.namespace == null) {
                     if (subproject.name == "fk_user_agent") {
                         androidExt.namespace = "io.flutterfastkit.fk_user_agent"
@@ -37,6 +33,7 @@ subprojects {
             }
         }
 
+        // ── Kotlin: paksa JVM target 17 ────────────────────────────
         subproject.plugins.withId("org.jetbrains.kotlin.android") {
             subproject.tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
                 kotlinOptions {
