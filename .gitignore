@@ -45,3 +45,4 @@ app.*.map.json
 # Android signing
 android/fire_todo.jks
 android/key.properties
+functions/node_modules/
