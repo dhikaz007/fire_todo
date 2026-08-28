@@ -1,0 +1,12 @@
+targets:
+  $default:
+    builders:
+      hive_ce_generator:hive_type_adapter_generator:
+        options:
+          relative_imports: true
+      hive_ce_generator:hive_adapters_generator:
+        options:
+          relative_imports: true
+      hive_ce_generator:hive_registrar_intermediate_generator:
+        options:
+          relative_imports: true
