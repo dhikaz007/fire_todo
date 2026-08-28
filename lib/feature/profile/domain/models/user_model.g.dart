@@ -7,17 +7,14 @@ part of 'user_model.dart';
 // **************************************************************************
 
 _UserModel _$UserModelFromJson(Map<String, dynamic> json) => _UserModel(
-      kind: json['kind'] as String?,
-      users: (json['users'] as List<dynamic>?)
-          ?.map((e) => UserElementData.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+  kind: json['kind'] as String?,
+  users: (json['users'] as List<dynamic>?)
+      ?.map((e) => UserElementData.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
 Map<String, dynamic> _$UserModelToJson(_UserModel instance) =>
-    <String, dynamic>{
-      'kind': instance.kind,
-      'users': instance.users,
-    };
+    <String, dynamic>{'kind': instance.kind, 'users': instance.users};
 
 _UserElementData _$UserElementDataFromJson(Map<String, dynamic> json) =>
     _UserElementData(

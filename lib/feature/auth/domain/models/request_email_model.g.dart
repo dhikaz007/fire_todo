@@ -13,7 +13,4 @@ _RequestEmailModel _$RequestEmailModelFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$RequestEmailModelToJson(_RequestEmailModel instance) =>
-    <String, dynamic>{
-      'kind': instance.kind,
-      'email': instance.email,
-    };
+    <String, dynamic>{'kind': instance.kind, 'email': instance.email};

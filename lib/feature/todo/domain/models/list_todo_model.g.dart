@@ -14,9 +14,7 @@ _ListTodoModel _$ListTodoModelFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ListTodoModelToJson(_ListTodoModel instance) =>
-    <String, dynamic>{
-      'documents': instance.documents,
-    };
+    <String, dynamic>{'documents': instance.documents};
 
 _DocumentModel _$DocumentModelFromJson(Map<String, dynamic> json) =>
     _DocumentModel(
@@ -41,21 +39,21 @@ Map<String, dynamic> _$DocumentModelToJson(_DocumentModel instance) =>
     };
 
 _FieldsModel _$FieldsModelFromJson(Map<String, dynamic> json) => _FieldsModel(
-      title: json['title'] == null
-          ? null
-          : DescriptionValueModel.fromJson(
-              json['title'] as Map<String, dynamic>),
-      description: json['description'] == null
-          ? null
-          : DescriptionValueModel.fromJson(
-              json['description'] as Map<String, dynamic>),
-      isDone: json['isDone'] == null
-          ? null
-          : IsDoneValueModel.fromJson(json['isDone'] as Map<String, dynamic>),
-      dueDate: json['dueDate'] == null
-          ? null
-          : DueDateValueModel.fromJson(json['dueDate'] as Map<String, dynamic>),
-    );
+  title: json['title'] == null
+      ? null
+      : DescriptionValueModel.fromJson(json['title'] as Map<String, dynamic>),
+  description: json['description'] == null
+      ? null
+      : DescriptionValueModel.fromJson(
+          json['description'] as Map<String, dynamic>,
+        ),
+  isDone: json['isDone'] == null
+      ? null
+      : IsDoneValueModel.fromJson(json['isDone'] as Map<String, dynamic>),
+  dueDate: json['dueDate'] == null
+      ? null
+      : DueDateValueModel.fromJson(json['dueDate'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$FieldsModelToJson(_FieldsModel instance) =>
     <String, dynamic>{
@@ -67,34 +65,28 @@ Map<String, dynamic> _$FieldsModelToJson(_FieldsModel instance) =>
 
 _DueDateValueModel _$DueDateValueModelFromJson(Map<String, dynamic> json) =>
     _DueDateValueModel(
-      timestampValue: const FirestoreDateTimeConverter()
-          .fromJson(json['timestampValue'] as String?),
+      timestampValue: const FirestoreDateTimeConverter().fromJson(
+        json['timestampValue'] as String?,
+      ),
     );
 
 Map<String, dynamic> _$DueDateValueModelToJson(_DueDateValueModel instance) =>
     <String, dynamic>{
-      'timestampValue':
-          const FirestoreDateTimeConverter().toJson(instance.timestampValue),
+      'timestampValue': const FirestoreDateTimeConverter().toJson(
+        instance.timestampValue,
+      ),
     };
 
 _DescriptionValueModel _$DescriptionValueModelFromJson(
-        Map<String, dynamic> json) =>
-    _DescriptionValueModel(
-      stringValue: json['stringValue'] as String?,
-    );
+  Map<String, dynamic> json,
+) => _DescriptionValueModel(stringValue: json['stringValue'] as String?);
 
 Map<String, dynamic> _$DescriptionValueModelToJson(
-        _DescriptionValueModel instance) =>
-    <String, dynamic>{
-      'stringValue': instance.stringValue,
-    };
+  _DescriptionValueModel instance,
+) => <String, dynamic>{'stringValue': instance.stringValue};
 
 _IsDoneValueModel _$IsDoneValueModelFromJson(Map<String, dynamic> json) =>
-    _IsDoneValueModel(
-      booleanValue: json['booleanValue'] as bool?,
-    );
+    _IsDoneValueModel(booleanValue: json['booleanValue'] as bool?);
 
 Map<String, dynamic> _$IsDoneValueModelToJson(_IsDoneValueModel instance) =>
-    <String, dynamic>{
-      'booleanValue': instance.booleanValue,
-    };
+    <String, dynamic>{'booleanValue': instance.booleanValue};

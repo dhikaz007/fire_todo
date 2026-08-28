@@ -2,8 +2,8 @@
 // Do not modify
 // Check in to version control
 
-import 'profile_hive.dart';
 import 'package:hive_ce/hive_ce.dart';
+import 'package:fire_todo/core/user_local/domain/models/profile_hive.dart';
 
 extension HiveRegistrar on HiveInterface {
   void registerAdapters() {
