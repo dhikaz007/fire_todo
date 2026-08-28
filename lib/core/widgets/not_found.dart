@@ -3,7 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
 
 import '../constant/color.dart';
-import '../constant/icons.dart';
+import '../../gen/assets.gen.dart';
 import 'button_primary.dart';
 import 'svg.dart';
 import 'text.dart';
@@ -32,7 +32,7 @@ class NotFoundScreen extends StatelessWidget {
                   ),
                   const Gap(12),
                   SvgApp(
-                    assetName: IconsApp.icFaceSad,
+                    assetName: Assets.icons.icFaceSad,
                     height: 44,
                     width: 44,
                     color: ColorApp.primary(50),

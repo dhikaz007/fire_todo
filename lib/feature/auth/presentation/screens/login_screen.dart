@@ -5,8 +5,7 @@ import 'package:gap/gap.dart';
 import '../../../../app/app_paths.dart';
 import '../../module/auth_paths.dart';
 import '../../../../core/constant/color.dart';
-import '../../../../core/constant/icons.dart';
-import '../../../../core/constant/images.dart';
+import '../../../../gen/assets.gen.dart';
 import '../../../../core/helper/loading.dart';
 import '../../../../core/widgets/button_primary.dart';
 import '../../../../core/widgets/modular_listener.dart';
@@ -85,9 +84,9 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Container(
             width: double.maxFinite,
             height: double.maxFinite,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
-                  fit: BoxFit.cover, image: AssetImage(ImagesApp.imgBgLogin)),
+                  fit: BoxFit.cover, image: AssetImage(Assets.images.imgBgLogin.path)),
             ),
             child: SafeArea(
               bottom: false,
@@ -105,9 +104,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           bottomRight: Radius.circular(24),
                         ),
                       ),
-                      child: const SvgApp(
-                        key: Key('logoApp'),
-                        assetName: IconsApp.logo,
+                      child: SvgApp(
+                        key: const Key('logoApp'),
+                        assetName: Assets.icons.logo,
                         width: 120,
                         height: 120,
                         fit: BoxFit.cover,

@@ -4,8 +4,7 @@ import 'package:gap/gap.dart';
 
 import '../../module/auth_paths.dart';
 import '../../../../core/constant/color.dart';
-import '../../../../core/constant/icons.dart';
-import '../../../../core/constant/images.dart';
+import '../../../../gen/assets.gen.dart';
 import '../../../../core/helper/loading.dart';
 import '../../../../core/widgets/button_primary.dart';
 import '../../../../core/widgets/modular_listener.dart';
@@ -70,10 +69,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
         body: Container(
           width: double.maxFinite,
           height: double.maxFinite,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage(ImagesApp.imgBgSignUp),
+              image: AssetImage(Assets.images.imgBgSignUp.path),
             ),
           ),
           padding: const EdgeInsets.symmetric(
@@ -100,9 +99,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                   const Spacer(),
-                  const Center(
+                  Center(
                     child: SvgApp(
-                      assetName: IconsApp.logo,
+                      assetName: Assets.icons.logo,
                       width: 120,
                       height: 120,
                       fit: BoxFit.cover,

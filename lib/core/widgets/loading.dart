@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import '../constant/color.dart';
-import '../constant/icons.dart';
+import '../../gen/assets.gen.dart';
 import 'svg.dart';
 import 'text.dart';
 
@@ -25,8 +25,8 @@ class LoadingApp extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const SvgApp(
-                  assetName: IconsApp.logo,
+                SvgApp(
+                  assetName: Assets.icons.logo,
                   width: 40,
                   height: 40,
                 ),

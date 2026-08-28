@@ -11,6 +11,7 @@ import '../../../../core/user_local/domain/i_hive_repository.dart';
 import '../../../../core/user_local/domain/models/profile_hive.dart';
 import '../../../../core/widgets/widgets.dart';
 import '../../../auth/presentation/cubit/auth_cubit.dart';
+import '../../../../gen/assets.gen.dart';
 import 'widget/widget.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -132,37 +133,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 weight: FontAppWeight.medium,
                               ),
                               children: [
-                                const MarkdownPageListTile(
-                                  icon: Icon(Icons.all_inclusive),
-                                  title: TextApp(
+                                MarkdownPageListTile(
+                                  icon: const Icon(Icons.all_inclusive),
+                                  title: const TextApp(
                                     text: 'View Readme',
                                     size: FontAppSize.font_14,
                                   ),
-                                  filename: 'assets/md/README.md',
+                                  filename: Assets.md.readme,
                                 ),
-                                const MarkdownPageListTile(
-                                  icon: Icon(Icons.view_list),
-                                  title: TextApp(
+                                MarkdownPageListTile(
+                                  icon: const Icon(Icons.view_list),
+                                  title: const TextApp(
                                     text: 'View Changelog',
                                     size: FontAppSize.font_14,
                                   ),
-                                  filename: 'assets/md/CHANGELOG.md',
+                                  filename: Assets.md.changelog,
                                 ),
-                                const MarkdownPageListTile(
-                                  icon: Icon(Icons.privacy_tip_outlined),
-                                  title: TextApp(
+                                MarkdownPageListTile(
+                                  icon: const Icon(Icons.privacy_tip_outlined),
+                                  title: const TextApp(
                                     text: 'Privacy Policy',
                                     size: FontAppSize.font_14,
                                   ),
-                                  filename: 'assets/md/PRIVACY_POLICY.md',
+                                  filename: Assets.md.privacyPolicy,
                                 ),
-                                const MarkdownPageListTile(
-                                  filename: 'assets/md/LICENSE.md',
-                                  title: TextApp(
+                                MarkdownPageListTile(
+                                  filename: Assets.md.license,
+                                  title: const TextApp(
                                     text: 'View License',
                                     size: FontAppSize.font_14,
                                   ),
-                                  icon: Icon(Icons.description),
+                                  icon: const Icon(Icons.description),
                                 ),
                                 const LicensesPageListTile(
                                   icon: Icon(Icons.info_outline),
@@ -172,11 +173,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                               ],
-                              applicationIcon: const SizedBox(
+                              applicationIcon: SizedBox(
                                 width: 100,
                                 height: 100,
                                 child: Image(
-                                  image: AssetImage(ImagesApp.logo),
+                                  image: AssetImage(Assets.images.logo.path),
                                 ),
                               ),
                             );
