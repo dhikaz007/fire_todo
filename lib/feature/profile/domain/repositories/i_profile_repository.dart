@@ -1,4 +1,4 @@
-import '../../../../shared/models/models.dart';
+import '../../../../core/models/models.dart';
 import '../../../auth/domain/models/models.dart';
 import '../models/models.dart';
 

@@ -1,5 +1,5 @@
-import 'package:fire_todo/shared/storage/domain/i_storage_token_repository.dart';
-import 'package:fire_todo/shared/storage/presentation/storage_token_controller.dart';
+import 'package:fire_todo/core/token_storage/domain/i_storage_token_repository.dart';
+import 'package:fire_todo/core/token_storage/presentation/storage_token_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

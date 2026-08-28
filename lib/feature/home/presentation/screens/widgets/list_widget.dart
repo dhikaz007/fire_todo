@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../../constant/constant.dart';
-import '../../../../../extensions/extensions.dart';
-import '../../../../../shared/widgets/widgets.dart';
+import '../../../../../core/constant/constant.dart';
+import '../../../../../core/extensions/extensions.dart';
+import '../../../../../core/widgets/widgets.dart';
 import '../../../../todo/domain/models/models.dart';
 
 class ListWidget extends StatelessWidget {

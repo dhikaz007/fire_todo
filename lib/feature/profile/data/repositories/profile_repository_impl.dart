@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 
-import '../../../../extensions/extensions.dart';
-import '../../../../shared/models/models.dart';
-import '../../../../shared/storage/domain/i_storage_token_repository.dart';
+import '../../../../core/extensions/extensions.dart';
+import '../../../../core/models/models.dart';
+import '../../../../core/token_storage/domain/i_storage_token_repository.dart';
 import '../../../auth/domain/models/request_email_model.dart';
 import '../../domain/models/delete_account_model.dart';
 import '../../domain/models/user_model.dart';

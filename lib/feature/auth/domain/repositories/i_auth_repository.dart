@@ -1,4 +1,4 @@
-import '../../../../shared/models/response_api.dart';
+import '../../../../core/models/response_api.dart';
 import '../models/login_model.dart';
 import '../models/request_email_model.dart';
 import '../models/sign_up_model.dart';

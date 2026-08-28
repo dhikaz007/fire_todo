@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../constant/color.dart';
-import '../../../../shared/widgets/text.dart';
+import '../../../../app/app_paths.dart';
+import '../../../../core/constant/color.dart';
+import '../../../../core/widgets/text.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -41,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     if (!mounted) return;
 
-    Modular.to.pushReplacementNamed('/main');
+    context.replace(AppPaths.main);
   }
 
   void _animateTo(double target) {

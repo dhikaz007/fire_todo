@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../constant/constant.dart';
-import '../../../../shared/widgets/widgets.dart';
+import '../../../../core/constant/constant.dart';
+import '../../../../core/widgets/widgets.dart';
 import '../../../home/presentation/screens/widgets/widgets.dart';
 import '../../domain/models/models.dart';
 import '../cubit/todo_cubit.dart';
@@ -271,7 +271,7 @@ class _ListTodoScreenState extends State<ListTodoScreen> {
                         leading: BackButton(
                           color: ColorApp.black,
                           onPressed: () {
-                            Modular.to.maybePop();
+                            context.maybePop();
                           },
                         ),
                         middle: const TextApp(
@@ -300,7 +300,7 @@ class _ListTodoScreenState extends State<ListTodoScreen> {
                             _showDeleteDialog(context, data);
                           },
                           onTap: () {
-                            Modular.to
+                            context
                                 .pushNamed('/todo/detail', arguments: data);
                           },
                           onComplete: (value) {

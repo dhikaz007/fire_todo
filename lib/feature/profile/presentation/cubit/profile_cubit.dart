@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../shared/local_db/domain/i_hive_repository.dart';
-import '../../../../shared/local_db/domain/models/profile_hive.dart';
+import '../../../../core/user_local/domain/i_hive_repository.dart';
+import '../../../../core/user_local/domain/models/profile_hive.dart';
 
-import '../../../../shared/storage/domain/i_storage_token_repository.dart';
+import '../../../../core/token_storage/domain/i_storage_token_repository.dart';
 import '../../../auth/domain/models/models.dart';
 import '../../domain/models/models.dart';
 import '../../domain/repositories/i_profile_repository.dart';

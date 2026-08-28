@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../constant/constant.dart';
-import '../../../../helper/loading.dart';
-import '../../../../shared/widgets/widgets.dart';
+import '../../../../app/app_paths.dart';
+import '../../../../core/constant/constant.dart';
+import '../../../../core/helper/loading.dart';
+import '../../../../core/widgets/widgets.dart';
 import '../../../todo/presentation/cubit/todo_cubit.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -60,7 +61,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             LoadingHelper.hideLoad(context);
             SnackbarApp.showSnackbar(context,
                 msg: response, type: SnackbarType.success);
-            Modular.to.popAndPushNamed('/main');
+            context.popAndPushNamed(AppPaths.main);
           },
           orElse: () {},
         );
@@ -80,7 +81,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     leading: BackButton(
                       color: ColorApp.black,
                       onPressed: () {
-                        Modular.to.maybePop();
+                        context.maybePop();
                       },
                     ),
                     middle: const TextApp(

@@ -1,6 +1,6 @@
 
 
-import '../../../../shared/models/models.dart';
+import '../../../../core/models/models.dart';
 import '../models/list_todo_model.dart';
 
 abstract class ITodoRepository {

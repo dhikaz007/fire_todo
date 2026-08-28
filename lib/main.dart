@@ -1,4 +1,4 @@
-import 'package:fk_user_agent/fk_user_agent.dart';
+import 'package:device_meta/device_meta.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -6,19 +6,23 @@ import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import 'constant/color.dart';
-import 'routes/app_module.dart';
-import 'shared/local_db/domain/models/profile_hive.dart';
-import 'shared/logging/app_logger.dart';
-import 'shared/widgets/button_double_back.dart';
-import 'shared/widgets/loading.dart';
+import 'core/constant/color.dart';
+import 'core/user_local/domain/models/profile_hive.dart';
+import 'core/logging/app_logger.dart';
+import 'core/navigation/navigation_service.dart';
+import 'core/widgets/button_double_back.dart';
+import 'core/widgets/loading.dart';
+import 'app/app_module.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load();
   const flavor = String.fromEnvironment('FLAVOR', defaultValue: 'dev');
   await initializeDateFormatting();
-  await FkUserAgent.init();
+
+  // Initialize device_meta (replaces FkUserAgent.init())
+  await DeviceMeta.init(storageKey: 'fire_todo');
+
   AppLogger.init();
   await Hive.initFlutter();
   Hive.registerAdapter(ProfileHiveAdapter());
@@ -26,7 +30,8 @@ void main() async {
 
   runApp(
     ModularApp(
-      module: AppModule(),
+      module: appModule,
+      navigatorKey: NavigationService.navigatorKey,
       child: const MainApp(flavor: flavor),
     ),
   );
@@ -42,12 +47,6 @@ class MainApp extends StatefulWidget {
 
 class _MainAppState extends State<MainApp> {
   @override
-  void initState() {
-    super.initState();
-    Modular.setInitialRoute('/');
-  }
-
-  @override
   Widget build(BuildContext context) {
     return GlobalLoaderOverlay(
       overlayColor: Colors.black87.withValues(alpha: .8),
@@ -61,7 +60,7 @@ class _MainAppState extends State<MainApp> {
             colorScheme: ColorScheme.fromSeed(seedColor: ColorApp.primary(50)),
             fontFamily: 'Montserrat',
           ),
-          routerConfig: Modular.routerConfig,
+          routerConfig: ModularApp.routerConfigOf(context),
         ),
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../constant/constant.dart';
-import '../../../../../shared/widgets/widgets.dart';
+import '../../../../../core/constant/constant.dart';
+import '../../../../../core/widgets/widgets.dart';
 import '../../../../todo/domain/models/models.dart';
 
 class PastItemWidget extends StatelessWidget {

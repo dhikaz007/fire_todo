@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
-import '../../../../extensions/extensions.dart';
-import '../../../../shared/models/models.dart';
+import '../../../../core/extensions/extensions.dart';
+import '../../../../core/models/models.dart';
 import '../../domain/models/list_todo_model.dart';
 import '../../domain/repositories/i_todo_repository.dart';
 import '../datasources/todo_remote_datasources.dart';

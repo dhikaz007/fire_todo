@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
-import '../../../../constant/constant.dart';
-import '../../../../shared/local_db/domain/i_hive_repository.dart';
+import '../../../../core/constant/constant.dart';
+import '../../../../core/user_local/domain/i_hive_repository.dart';
 
 class TodoRemoteDatasources {
   final Dio _dio;

@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 
-import '../../../../extensions/dio_err.dart';
-import '../../../../shared/local_db/domain/i_hive_repository.dart';
-import '../../../../shared/models/error_response_model.dart';
-import '../../../../shared/models/response_api.dart';
-import '../../../../shared/storage/domain/i_storage_token_repository.dart';
+import '../../../../core/extensions/dio_err.dart';
+import '../../../../core/user_local/domain/i_hive_repository.dart';
+import '../../../../core/models/error_response_model.dart';
+import '../../../../core/models/response_api.dart';
+import '../../../../core/token_storage/domain/i_storage_token_repository.dart';
 import '../../domain/models/models.dart';
 import '../../domain/repositories/i_auth_repository.dart';
 import '../datasources/auth_remote_datasource.dart';

@@ -3,8 +3,8 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_terms_viewer/flutter_terms_viewer.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../constant/constant.dart';
-import '../../../../shared/widgets/widgets.dart';
+import '../../../../core/constant/constant.dart';
+import '../../../../core/widgets/widgets.dart';
 
 class PrivacyPolicyScreen extends StatefulWidget {
   const PrivacyPolicyScreen({super.key});
@@ -127,7 +127,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                   leading: BackButton(
                     color: ColorApp.black,
                     onPressed: () {
-                      Modular.to.maybePop();
+                      context.maybePop();
                     },
                   ),
                   middle: const TextApp(

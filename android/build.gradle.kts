@@ -22,7 +22,6 @@ subprojects {
                 // Patch namespace untuk plugin lama yang belum support namespace
                 if (namespace == null) {
                     when (project.name) {
-                        "fk_user_agent" -> namespace = "io.flutterfastkit.fk_user_agent"
                         "flutter_jailbreak_detection" -> namespace = "com.btnsmartmobile.jailbreakdetection"
                     }
                 }
@@ -37,7 +36,6 @@ subprojects {
                 // Patch namespace untuk plugin lama yang belum support namespace
                 if (namespace == null) {
                     when (project.name) {
-                        "fk_user_agent" -> namespace = "io.flutterfastkit.fk_user_agent"
                         "flutter_jailbreak_detection" -> namespace = "com.btnsmartmobile.jailbreakdetection"
                     }
                 }

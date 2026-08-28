@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../shared/local_db/domain/i_hive_repository.dart';
-import '../../../../shared/storage/domain/i_storage_token_repository.dart';
+import '../../../../core/user_local/domain/i_hive_repository.dart';
+import '../../../../core/token_storage/domain/i_storage_token_repository.dart';
 import '../../domain/models/login_model.dart';
 import '../../domain/models/request_email_model.dart';
 import '../../domain/models/sign_up_model.dart';

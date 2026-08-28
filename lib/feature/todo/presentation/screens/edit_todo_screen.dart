@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../constant/constant.dart';
-import '../../../../shared/widgets/widgets.dart';
+import '../../../../core/constant/constant.dart';
+import '../../../../core/widgets/widgets.dart';
 
 class EditTodoScreen extends StatefulWidget {
   const EditTodoScreen({super.key});

@@ -4,10 +4,10 @@ import 'package:gap/gap.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
-import '../../../../constant/constant.dart';
-import '../../../../extensions/extensions.dart';
-import '../../../../helper/loading.dart';
-import '../../../../shared/widgets/widgets.dart';
+import '../../../../core/constant/constant.dart';
+import '../../../../core/extensions/extensions.dart';
+import '../../../../core/helper/loading.dart';
+import '../../../../core/widgets/widgets.dart';
 import '../cubit/todo_cubit.dart';
 
 class CreateTodoScreen extends StatefulWidget {
@@ -146,7 +146,7 @@ class _CreateTodoScreenState extends State<CreateTodoScreen> {
             );
             if (!context.mounted) return;
             context.read<TodoCubit>().loadTodo();
-            Modular.to.pop();
+            context.pop();
           },
           orElse: () => LoadingHelper.hideLoad(context),
         );
@@ -168,7 +168,7 @@ class _CreateTodoScreenState extends State<CreateTodoScreen> {
                   leading: BackButton(
                     color: ColorApp.black,
                     onPressed: () {
-                      Modular.to.maybePop();
+                      context.maybePop();
                     },
                   ),
                   middle: const TextApp(

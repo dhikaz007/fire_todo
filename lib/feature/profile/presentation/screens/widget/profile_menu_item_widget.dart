@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../constant/constant.dart';
-import '../../../../../shared/widgets/widgets.dart';
+import '../../../../../core/constant/constant.dart';
+import '../../../../../core/widgets/widgets.dart';
 
 class ProfileMenuItemWidget extends StatelessWidget {
   final String label;
