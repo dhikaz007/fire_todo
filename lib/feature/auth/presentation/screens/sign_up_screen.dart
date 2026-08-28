@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../constant/color.dart';
-import '../../../../constant/icons.dart';
-import '../../../../constant/images.dart';
-import '../../../../helper/loading.dart';
-import '../../../../shared/widgets/button_primary.dart';
-import '../../../../shared/widgets/modular_listener.dart';
-import '../../../../shared/widgets/snackbar.dart';
-import '../../../../shared/widgets/svg.dart';
-import '../../../../shared/widgets/text.dart';
-import '../../../../shared/widgets/textformfield.dart';
+import '../../module/auth_paths.dart';
+import '../../../../core/constant/color.dart';
+import '../../../../core/constant/icons.dart';
+import '../../../../core/constant/images.dart';
+import '../../../../core/helper/loading.dart';
+import '../../../../core/widgets/button_primary.dart';
+import '../../../../core/widgets/modular_listener.dart';
+import '../../../../core/widgets/snackbar.dart';
+import '../../../../core/widgets/svg.dart';
+import '../../../../core/widgets/text.dart';
+import '../../../../core/widgets/textformfield.dart';
 import '../cubit/auth_cubit.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -51,7 +52,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
         orElse: () => false,
       ),
       listener: (context, state) {
-        // debugPrint('STATE SIGN UP $state');
         state.maybeWhen(
           loading: () => LoadingHelper.showLoad(context),
           failed: (errorMessage) => SnackbarApp.showSnackbar(
@@ -61,7 +61,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           signUp: (response) {
             LoadingHelper.hideLoad(context);
-            Modular.to.pushNamed('/auth/verify');
+            context.pushNamed(AuthPaths.verify);
           },
           orElse: () => LoadingHelper.hideLoad(context),
         );
@@ -91,7 +91,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: IconButton(
-                      onPressed: () => Modular.to.pop(),
+                      onPressed: () => context.pop(),
                       icon: const Icon(
                         Icons.arrow_back_ios_new,
                         color: ColorApp.black,
@@ -165,7 +165,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ButtonPrimary(
                     radius: 24,
                     size: FontAppSize.font_16,
-                    onPressed: ()  {
+                    onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         context.read<AuthCubit>().signUp(
                               email: _emailController.text.trim(),

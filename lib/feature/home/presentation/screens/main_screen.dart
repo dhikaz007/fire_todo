@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../../../../constant/constant.dart';
-import '../../../../helper/loading.dart';
-import '../../../../shared/storage/domain/i_storage_token_repository.dart';
-import '../../../../shared/widgets/widgets.dart';
+import '../../../../app/app_paths.dart';
+import '../../../todo/module/todo_paths.dart';
+import '../../../../core/constant/constant.dart';
+import '../../../../core/helper/loading.dart';
+import '../../../../core/token_storage/domain/i_storage_token_repository.dart';
+import '../../../../core/widgets/widgets.dart';
 import '../../../profile/presentation/cubit/profile_cubit.dart';
 import '../../../profile/presentation/screens/screens.dart';
 import 'screens.dart';
@@ -44,13 +46,13 @@ class _MainScreenState extends State<MainScreen> {
         state.maybeWhen(
           loading: () => LoadingHelper.showLoad(context),
           failed: (errorMessage) async {
-            await Modular.get<IStorageTokenRepository>().removeAllToken();
+            await inject<IStorageTokenRepository>().removeAllToken();
             if (!context.mounted) return;
             SnackbarApp.showSnackbar(context,
                 msg: errorMessage, type: SnackbarType.failed);
             if (!context.mounted) return;
             LoadingHelper.hideLoad(context);
-            Modular.to.pushReplacementNamed('/');
+            context.replace(AppPaths.splash);
           },
           orElse: () => LoadingHelper.hideLoad(context),
         );
@@ -72,7 +74,7 @@ class _MainScreenState extends State<MainScreen> {
               key: const Key('navBarMain'),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(300)),
-              onPressed: () => Modular.to.pushNamed('/todo/create'),
+              onPressed: () => context.pushNamed(TodoPaths.create),
               tooltip: 'Start Todo',
               elevation: 0,
               backgroundColor: ColorApp.primary(50),

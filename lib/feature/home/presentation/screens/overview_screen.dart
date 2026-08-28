@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../constant/constant.dart';
-import '../../../../helper/loading.dart';
-import '../../../../shared/local_db/domain/i_hive_repository.dart';
-import '../../../../shared/local_db/domain/models/profile_hive.dart';
-import '../../../../shared/widgets/widgets.dart';
+import '../../../todo/module/todo_paths.dart';
+import '../../../notifications/module/notifications_paths.dart';
+import '../../../../core/constant/constant.dart';
+import '../../../../core/helper/loading.dart';
+import '../../../../core/user_local/domain/i_hive_repository.dart';
+import '../../../../core/user_local/domain/models/profile_hive.dart';
+import '../../../../core/widgets/widgets.dart';
 import '../../../todo/domain/models/models.dart';
 import '../../../todo/presentation/cubit/todo_cubit.dart';
 import 'widgets/widgets.dart';
@@ -21,13 +23,12 @@ class OverviewScreen extends StatefulWidget {
 class _OverviewScreenState extends State<OverviewScreen> {
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _descriptionController = TextEditingController();
-  // final user = HiveService().getProfileValue();
   late ProfileHive? user;
 
   @override
   void initState() {
     super.initState();
-    user = Modular.get<IHiveRepository>().getProfileValue();
+    user = inject<IHiveRepository>().getProfileValue();
     context.read<TodoCubit>().loadTodo();
   }
 
@@ -137,7 +138,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
                         trailing: IconButton(
                           visualDensity: VisualDensity.compact,
                           onPressed: () {
-                            Modular.to.pushNamed('/notifications/');
+                            context.pushNamed(NotificationsPaths.list);
                           },
                           icon: const Icon(
                             Icons.notifications,
@@ -282,7 +283,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
                         ),
                         TextButton(
                           onPressed: () {
-                            Modular.to.pushNamed('/todo/list');
+                            context.pushNamed(TodoPaths.list);
                           },
                           child: TextApp(
                             text: 'See all',
@@ -295,7 +296,6 @@ class _OverviewScreenState extends State<OverviewScreen> {
                     ),
                     ModularBuilder<TodoCubit, TodoState>(
                       builder: (context, state) {
-                        // debugPrint(state.toString());
                         return state.maybeWhen(
                           loading: () => Container(
                             height: 300,

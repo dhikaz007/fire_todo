@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../constant/constant.dart';
-import '../../../../helper/loading.dart';
-import '../../../../shared/local_db/domain/i_hive_repository.dart';
-import '../../../../shared/local_db/domain/models/profile_hive.dart';
-import '../../../../shared/widgets/widgets.dart';
+import '../../../auth/module/auth_paths.dart';
+import '../../module/profile_paths.dart';
+import '../../../../core/constant/constant.dart';
+import '../../../../core/helper/loading.dart';
+import '../../../../core/user_local/domain/i_hive_repository.dart';
+import '../../../../core/user_local/domain/models/profile_hive.dart';
+import '../../../../core/widgets/widgets.dart';
 import '../../../auth/presentation/cubit/auth_cubit.dart';
 import 'widget/widget.dart';
 
@@ -24,7 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   void initState() {
     super.initState();
-    user = Modular.get<IHiveRepository>().getProfileValue();
+    user = inject<IHiveRepository>().getProfileValue();
   }
 
   @override
@@ -53,7 +55,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               msg: 'Successfully Logout',
               type: SnackbarType.success,
             );
-            Modular.to.navigate('/auth/');
+            context.navigate(AuthPaths.login);
             LoadingHelper.hideLoad(context);
           },
           signUp: (response) {},
@@ -152,8 +154,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     text: 'Privacy Policy',
                                     size: FontAppSize.font_14,
                                   ),
-                                  filename:
-                                      'assets/md/PRIVACY_POLICY.md', // Pastikan file ini ada di assets
+                                  filename: 'assets/md/PRIVACY_POLICY.md',
                                 ),
                                 const MarkdownPageListTile(
                                   filename: 'assets/md/LICENSE.md',
@@ -185,14 +186,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ProfileMenuItemWidget(
                           label: 'Privacy Policy',
                           onTap: () {
-                            Modular.to.pushNamed('/profile/privacy');
+                            context.pushNamed(ProfilePaths.privacy);
                           },
                         ),
                         const Divider(height: 1),
                         ProfileMenuItemWidget(
                           label: 'Settings',
                           onTap: () {
-                            Modular.to.pushNamed('/profile/settings');
+                            context.pushNamed(ProfilePaths.settings);
                           },
                         ),
                       ],

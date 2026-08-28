@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:fire_todo/shared/local_db/domain/i_hive_repository.dart';
-import 'package:fire_todo/shared/local_db/domain/models/profile_hive.dart';
-import 'package:fire_todo/shared/local_db/presentation/hive_controller.dart';
+import 'package:fire_todo/core/user_local/domain/i_hive_repository.dart';
+import 'package:fire_todo/core/user_local/domain/models/profile_hive.dart';
+import 'package:fire_todo/core/user_local/presentation/hive_controller.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockHiveRepository extends Mock implements IHiveRepository {}

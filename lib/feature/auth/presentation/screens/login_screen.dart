@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../constant/color.dart';
-import '../../../../constant/icons.dart';
-import '../../../../constant/images.dart';
-import '../../../../helper/loading.dart';
-import '../../../../shared/widgets/button_primary.dart';
-import '../../../../shared/widgets/modular_listener.dart';
-import '../../../../shared/widgets/snackbar.dart';
-import '../../../../shared/widgets/svg.dart';
-import '../../../../shared/widgets/text.dart';
-import '../../../../shared/widgets/textformfield.dart';
+import '../../../../app/app_paths.dart';
+import '../../module/auth_paths.dart';
+import '../../../../core/constant/color.dart';
+import '../../../../core/constant/icons.dart';
+import '../../../../core/constant/images.dart';
+import '../../../../core/helper/loading.dart';
+import '../../../../core/widgets/button_primary.dart';
+import '../../../../core/widgets/modular_listener.dart';
+import '../../../../core/widgets/snackbar.dart';
+import '../../../../core/widgets/svg.dart';
+import '../../../../core/widgets/text.dart';
+import '../../../../core/widgets/textformfield.dart';
 import '../../../profile/presentation/cubit/profile_cubit.dart';
 import '../cubit/auth_cubit.dart';
 
@@ -61,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
             context.read<ProfileCubit>().getUser();
             Future.delayed(const Duration(milliseconds: 600), () {
               if (context.mounted) {
-                Modular.to.navigate('/main');
+                context.navigate(AppPaths.main);
                 LoadingHelper.hideLoad(context);
               }
             });
@@ -212,7 +214,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 InkWell(
                                   key: const Key('buttonSignUp'),
                                   onTap: ()  {
-                                    Modular.to.pushNamed('/auth/sign-up');
+                                    context.pushNamed(AuthPaths.signUp);
                                   },
                                   child: const TextApp(
                                     text: 'Sign Up',

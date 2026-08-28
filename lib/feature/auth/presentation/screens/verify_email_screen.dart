@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../constant/color.dart';
-import '../../../../helper/loading.dart';
-import '../../../../shared/widgets/button_primary.dart';
-import '../../../../shared/widgets/modular_listener.dart';
-import '../../../../shared/widgets/snackbar.dart';
-import '../../../../shared/widgets/text.dart';
+import '../../module/auth_paths.dart';
+import '../../../../core/constant/color.dart';
+import '../../../../core/helper/loading.dart';
+import '../../../../core/widgets/button_primary.dart';
+import '../../../../core/widgets/modular_listener.dart';
+import '../../../../core/widgets/snackbar.dart';
+import '../../../../core/widgets/text.dart';
 import '../cubit/auth_cubit.dart';
 
 class VerifyEmailScreen extends StatefulWidget {
@@ -53,7 +54,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
             onPressed: () {
               Navigator.of(context).pop();
               if (!context.mounted) return;
-              Modular.to.navigate('/auth/');
+              context.navigate(AuthPaths.login);
             },
           ),
         ],
