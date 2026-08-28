@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart' hide ModularStateX;
 import 'package:gap/gap.dart';
 
 import '../../../../core/constant/constant.dart';
@@ -22,7 +23,7 @@ class _ListTodoScreenState extends State<ListTodoScreen> {
   @override
   void initState() {
     super.initState();
-    // context.read<TodoCubit>().loadTodo();
+    context.read<TodoCubit>().loadTodo();
   }
 
   @override
@@ -231,7 +232,7 @@ class _ListTodoScreenState extends State<ListTodoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorApp.backgroundLight,
-      body: ModularBuilder<TodoCubit, TodoState>(
+      body: BlocBuilder<TodoCubit, TodoState>(
         builder: (context, state) {
           return state.maybeWhen(
             loading: () => Center(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart' hide ModularStateX;
 import 'package:gap/gap.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
@@ -130,7 +131,7 @@ class _CreateTodoScreenState extends State<CreateTodoScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ModularListener<TodoCubit, TodoState>(
+    return BlocListener<TodoCubit, TodoState>(
       listener: (context, state) {
         state.maybeWhen(
           loading: () => LoadingHelper.showLoad(context),

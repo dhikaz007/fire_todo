@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart' hide ModularStateX;
 
 import '../../../../app/app_paths.dart';
 import '../../../todo/module/todo_paths.dart';
@@ -41,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ModularListener<ProfileCubit, ProfileState>(
+    return BlocListener<ProfileCubit, ProfileState>(
       listener: (context, state) {
         state.maybeWhen(
           loading: () => LoadingHelper.showLoad(context),

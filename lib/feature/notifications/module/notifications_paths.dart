@@ -4,4 +4,5 @@ class NotificationsPaths {
 
   static const base = '/notifications';
   static const list = '$base/';
+  static const detail = '$base/detail';
 }

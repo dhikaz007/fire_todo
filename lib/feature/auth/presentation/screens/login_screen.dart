@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart' hide ModularStateX;
 import 'package:gap/gap.dart';
 
 import '../../../../app/app_paths.dart';
@@ -8,7 +9,6 @@ import '../../../../core/constant/color.dart';
 import '../../../../gen/assets.gen.dart';
 import '../../../../core/helper/loading.dart';
 import '../../../../core/widgets/button_primary.dart';
-import '../../../../core/widgets/modular_listener.dart';
 import '../../../../core/widgets/snackbar.dart';
 import '../../../../core/widgets/svg.dart';
 import '../../../../core/widgets/text.dart';
@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ModularListener<AuthCubit, AuthState>(
+    return BlocListener<AuthCubit, AuthState>(
       listenWhen: (previous, current) => current.maybeWhen(
         loading: () => true,
         failed: (errorMessage) => true,
@@ -189,7 +189,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ButtonPrimary(
                               radius: 20,
                               key: const Key('buttonLogin'),
-                              onPressed: ()  {
+                              onPressed: () {
                                 if (_formKey.currentState!.validate()) {
                                   context.read<AuthCubit>().loginEmailPassword(
                                         email: _emailController.text.trim(),
@@ -212,7 +212,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 const Gap(8),
                                 InkWell(
                                   key: const Key('buttonSignUp'),
-                                  onTap: ()  {
+                                  onTap: () {
                                     context.pushNamed(AuthPaths.signUp);
                                   },
                                   child: const TextApp(

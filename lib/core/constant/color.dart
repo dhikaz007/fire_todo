@@ -89,6 +89,7 @@ class ColorApp {
   }
 
   static const backgroundLight = Color(0xFFF9FAFB);
+  static const border = Color(0xFFE8E8EE);
   static const backgroundDark = Color(0xFF1E1E1E);
   static const backgroundGrey = Color(0xFFF5F5F5);
   static const textPrimary = Color(0xFF212121);

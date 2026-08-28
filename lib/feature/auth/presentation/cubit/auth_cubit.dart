@@ -1,6 +1,9 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../../core/logging/app_logger.dart';
+import '../../../../core/services/fcm_service.dart';
 import '../../../../core/user_local/domain/i_hive_repository.dart';
 import '../../../../core/token_storage/domain/i_storage_token_repository.dart';
 import '../../domain/models/login_model.dart';
@@ -41,6 +44,15 @@ class AuthCubit extends Cubit<AuthState> {
       await _iStorageTokenRepository.setRefreshToken(
         response.data?.refreshToken ?? '',
       );
+
+      // Save FCM token to Firestore after login
+      try {
+        final fcmService = inject<FcmService>();
+        await fcmService.saveTokenToFirestore();
+      } catch (e) {
+        // FCM token save failed, but login still succeeds
+        AppLogger().w('Failed to save FCM token: $e');
+      }
 
       emit(
         AuthState.authenticated(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart' hide ModularStateX;
 import 'package:gap/gap.dart';
 
 import '../../../todo/module/todo_paths.dart';
@@ -41,7 +42,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ModularListener<TodoCubit, TodoState>(
+    return BlocListener<TodoCubit, TodoState>(
       listener: (context, state) {
         state.maybeWhen(
           loading: () => LoadingHelper.showLoad(context),
@@ -59,8 +60,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
               msg: 'Successfully edited',
               type: SnackbarType.success,
             );
-            if (!context.mounted) return;
-            context.read<TodoCubit>().loadTodo();
+            if (!context.mounted) return;              context.read<TodoCubit>().loadTodo();
           },
           delete: (response) async {
             LoadingHelper.hideLoad(context);
@@ -70,8 +70,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
               msg: response,
               type: SnackbarType.success,
             );
-            if (!context.mounted) return;
-            context.read<TodoCubit>().loadTodo();
+            if (!context.mounted) return;              context.read<TodoCubit>().loadTodo();
           },
           orElse: () => LoadingHelper.hideLoad(context),
         );
@@ -159,24 +158,24 @@ class _OverviewScreenState extends State<OverviewScreen> {
                       constraints: const BoxConstraints(
                         maxHeight: 90,
                       ),
-                      child: ModularBuilder<TodoCubit, TodoState>(
-                        builder: (context, state) => state.maybeWhen(
-                          loading: () => Center(
-                            child: CircularProgressIndicator.adaptive(
-                              valueColor:
-                                  AlwaysStoppedAnimation(ColorApp.primary(50)),
+                      child: BlocBuilder<TodoCubit, TodoState>(
+                          builder: (context, state) => state.maybeWhen(
+                            loading: () => Center(
+                              child: CircularProgressIndicator.adaptive(
+                                valueColor:
+                                    AlwaysStoppedAnimation(ColorApp.primary(50)),
+                              ),
                             ),
-                          ),
-                          failed: (errorMessage) => TextApp(text: errorMessage),
-                          loaded: (response) {
-                            final now = DateTime.now();
-                            final upcomingTodos =
-                                response.documents?.where((doc) {
-                                      final dueDate =
-                                          doc.fields?.dueDate?.timestampValue;
-                                      return dueDate?.isBefore(now) ?? false;
-                                    }).toList() ??
-                                    [];
+                            failed: (errorMessage) => TextApp(text: errorMessage),
+                            loaded: (response) {
+                              final now = DateTime.now();
+                              final upcomingTodos =
+                                  response.documents?.where((doc) {
+                                        final dueDate =
+                                            doc.fields?.dueDate?.timestampValue;
+                                        return dueDate?.isBefore(now) ?? false;
+                                      }).toList() ??
+                                      [];
 
                             if (upcomingTodos.isEmpty) {
                               return Container(
@@ -219,7 +218,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
                       constraints: const BoxConstraints(
                         maxHeight: 90,
                       ),
-                      child: ModularBuilder<TodoCubit, TodoState>(
+                      child: BlocBuilder<TodoCubit, TodoState>(
                         builder: (context, state) => state.maybeWhen(
                           loading: () => Center(
                             child: CircularProgressIndicator.adaptive(
@@ -294,7 +293,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
                         ),
                       ],
                     ),
-                    ModularBuilder<TodoCubit, TodoState>(
+                    BlocBuilder<TodoCubit, TodoState>(
                       builder: (context, state) {
                         return state.maybeWhen(
                           loading: () => Container(

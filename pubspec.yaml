@@ -10,10 +10,14 @@ dependencies:
   about: ^2.2.0
   another_flushbar: ^2.2.4
   bloc: ^9.2.1
+  cloud_firestore: ^5.6.5
   dart_either: ^2.2.0
   device_meta: ^3.0.1
   dio: ^5.11.0
   equatable: ^2.1.0
+  firebase_auth: ^5.5.4
+  firebase_core: ^3.12.1
+  firebase_messaging: ^15.2.0
 
   flutter:
     sdk: flutter

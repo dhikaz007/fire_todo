@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart' hide ModularStateX;
 import 'package:gap/gap.dart';
 
 import '../../module/auth_paths.dart';
 import '../../../../core/constant/color.dart';
-import '../../../../gen/assets.gen.dart';
 import '../../../../core/helper/loading.dart';
 import '../../../../core/widgets/button_primary.dart';
-import '../../../../core/widgets/modular_listener.dart';
 import '../../../../core/widgets/snackbar.dart';
 import '../../../../core/widgets/svg.dart';
 import '../../../../core/widgets/text.dart';
 import '../../../../core/widgets/textformfield.dart';
 import '../cubit/auth_cubit.dart';
+import '../../../../gen/assets.gen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -43,7 +43,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ModularListener<AuthCubit, AuthState>(
+    return BlocListener<AuthCubit, AuthState>(
       listenWhen: (previous, current) => current.maybeWhen(
         loading: () => true,
         failed: (errorMessage) => true,

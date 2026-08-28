@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart' hide ModularStateX;
 import 'package:gap/gap.dart';
 
 import '../../../../app/app_paths.dart';
@@ -52,7 +53,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ModularListener<TodoCubit, TodoState>(
+    return BlocListener<TodoCubit, TodoState>(
       listener: (context, state) {
         debugPrint("$state");
         state.maybeWhen(
